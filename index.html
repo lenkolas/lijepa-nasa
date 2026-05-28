@@ -146,6 +146,8 @@ audio{color-scheme:dark}
 audio::-webkit-media-controls-panel{background:rgba(255,255,255,.08)}
 .audio-wrap{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1.25rem 1.5rem}
 .audio-credit{font-family:'Space Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.06em;margin-top:.6rem}
+.yt-link{display:block;font-family:'Space Mono',monospace;font-size:.7rem;color:rgba(255,255,255,.65);text-decoration:none;padding:.7rem 1rem;border:1px solid rgba(255,255,255,.12);border-radius:6px;letter-spacing:.04em;transition:all .2s}
+.yt-link:hover{border-color:var(--red);color:#fff;background:rgba(185,28,46,.15)}
 .back-top-btn-dark{display:block;margin:3rem auto 0;font-family:'Space Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.35);letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid rgba(255,255,255,.15);border-radius:4px;padding:.5rem 1.2rem;cursor:pointer;transition:all .2s}
 .back-top-btn-dark:hover{color:var(--gold);border-color:var(--gold)}
 
@@ -155,6 +157,62 @@ footer span{color:var(--gold)}
 
 /* ── SCROLLED STATE ── */
 section[id]{scroll-margin-top:60px}
+
+/* ── KARAOKE ── */
+#karaoke-lines{display:flex;flex-direction:column;gap:.5rem}
+.kr-line{padding:.9rem 1.25rem;border-radius:8px;border-left:3px solid rgba(255,255,255,.08);background:rgba(0,0,0,.25);transition:all .35s ease;cursor:default}
+.kr-line.active{border-left-color:var(--gold);background:rgba(196,151,58,.12);transform:translateX(6px)}
+.kr-line.done{opacity:.35}
+.kr-text{display:block;font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;color:rgba(255,255,255,.5);transition:color .35s}
+.kr-line.active .kr-text{color:var(--gold-light);font-size:1.35rem}
+.kr-tr{display:block;font-size:.78rem;color:rgba(255,255,255,.25);margin-top:.2rem;transition:color .35s}
+.kr-line.active .kr-tr{color:rgba(255,255,255,.55)}
+
+/* ── PRACTICAR ── */
+#practicar-wrap{background:var(--cream)}
+#practicar-wrap .section-title{color:var(--blue-deep)}
+.prac-tabs{display:flex;gap:.5rem;margin-bottom:2rem}
+.prac-tab{font-family:'Space Mono',monospace;font-size:.7rem;padding:.5rem 1.2rem;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--ink-faint);cursor:pointer;letter-spacing:.05em;transition:all .2s}
+.prac-tab.active{background:var(--blue-deep);border-color:var(--blue-deep);color:#fff}
+.prac-desc{font-size:.88rem;color:var(--ink-light);margin-bottom:1.75rem;line-height:1.6}
+
+/* Flashcards */
+.fc-card{perspective:1000px;height:180px;cursor:pointer;margin-bottom:1.5rem;user-select:none}
+.fc-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .5s ease}
+.fc-inner.flipped{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem;text-align:center;gap:.5rem}
+.fc-front{background:var(--white);border:2px solid var(--border)}
+.fc-back{background:var(--blue-deep);border:2px solid var(--blue);transform:rotateY(180deg)}
+.fc-label{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase}
+.fc-back .fc-label{color:rgba(255,255,255,.4)}
+.fc-text{font-family:'Playfair Display',serif;font-size:1.25rem;font-style:italic;color:var(--ink);line-height:1.4}
+.fc-back .fc-text{color:var(--gold-light)}
+.fc-ipa{font-family:'Space Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.5);margin-top:.25rem}
+.fc-hint{font-family:'Space Mono',monospace;font-size:.58rem;color:var(--ink-faint);letter-spacing:.08em}
+.fc-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.75rem}
+.fc-counter{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--ink-faint)}
+.fc-btn{font-family:'Space Mono',monospace;font-size:.65rem;padding:.5rem 1rem;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--ink-light);cursor:pointer;letter-spacing:.05em;transition:all .2s}
+.fc-btn:hover{border-color:var(--blue);color:var(--blue)}
+.fc-btn.primary{background:var(--blue-deep);border-color:var(--blue-deep);color:#fff}
+.fc-btn.primary:hover{background:var(--blue-light)}
+.fc-progress{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:.5rem}
+.fc-bar{height:100%;background:var(--gold);border-radius:2px;transition:width .3s ease}
+
+/* Vocabulary */
+.vocab-cat{margin-bottom:2.5rem}
+.vocab-cat-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--blue-deep);margin-bottom:1rem;padding-bottom:.4rem;border-bottom:2px solid var(--gold);display:inline-block}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.75rem}
+.vocab-card{background:var(--white);border:1px solid var(--border);border-radius:8px;min-height:90px;cursor:pointer;perspective:600px;user-select:none}
+.vocab-card .vc-front,.vocab-card .vc-back{padding:.85rem 1rem;border-radius:8px;transition:all .3s;display:flex;flex-direction:column;gap:.3rem}
+.vocab-card .vc-front{display:flex;align-items:center;justify-content:center;text-align:center;min-height:90px}
+.vocab-card .vc-front em{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--ink)}
+.vocab-card .vc-back{display:none;background:var(--blue-deep);border-radius:8px}
+.vocab-card.open .vc-front{display:none}
+.vocab-card.open .vc-back{display:flex}
+.vocab-card .vc-back strong{color:var(--gold-light);font-size:.95rem}
+.vocab-card .vc-back span{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.4}
+.vocab-card .vc-back .vc-ex{font-family:'Playfair Display',serif;font-style:italic;color:rgba(255,255,255,.75);font-size:.82rem;margin-top:.2rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.3rem}
+
 </style>
 </head>
 <body>
@@ -167,6 +225,7 @@ section[id]{scroll-margin-top:60px}
     <button class="topnav-link" onclick="scrollToSection('letra')">02 Letra</button>
     <button class="topnav-link" onclick="scrollToSection('pronunciacion')">03 Pronunciación</button>
     <button class="topnav-link" onclick="scrollToSection('cantar')">04 Cantar</button>
+    <button class="topnav-link" onclick="scrollToSection('practicar')">05 Practicar</button>
   </div>
 </nav>
 
@@ -182,6 +241,7 @@ section[id]{scroll-margin-top:60px}
     <button class="hero-btn" onclick="scrollToSection('letra')">02 — Letra</button>
     <button class="hero-btn" onclick="scrollToSection('pronunciacion')">03 — Pronunciación</button>
     <button class="hero-btn" onclick="scrollToSection('cantar')">04 — Cantar</button>
+    <button class="hero-btn" onclick="scrollToSection('practicar')">05 — Practicar</button>
   </div>
   <div class="hero-scroll">↓ desplazar</div>
 </div>
@@ -556,24 +616,27 @@ section[id]{scroll-margin-top:60px}
     <div class="section-divider"></div>
   </div>
   <div class="phon-intro">
-    <strong>El croata es fonético:</strong> cada letra siempre suena igual. Las principales diferencias con el español son los dígrafos <strong>lj, nj</strong> y las letras <strong>č, ć, š, ž</strong>. El croata tiene además <strong>acento tonal</strong> (tono alto y tono bajo) — los diacríticos en las transcripciones lo reflejan. El ritmo musical del himno lo guía.
+    El croata utiliza el alfabeto latino de Gaj (<em>gajica</em>), estandarizado en el siglo XIX por el lingüista Ljudevit Gaj — el mismo que fundó el periódico donde Mihanović publicó el poema del himno. Tiene 30 letras: 25 letras individuales y 5 dígrafos (dos letras que representan un solo sonido: <strong>lj, nj, dž</strong> y los dífonos <strong>dž, đ</strong>).<br><br>
+    La ventaja principal es que el croata es <strong>estrictamente fonético</strong>: cada letra representa siempre el mismo sonido, sin excepciones. No hay letras mudas, ni pronunciaciones que cambien según el contexto. Si aprendes las letras, puedes leer cualquier palabra croata correctamente.<br><br>
+    Sin embargo, hay sonidos que <strong>no existen en español</strong> o que suenan diferente: la <strong>c</strong> siempre es «ts» (nunca «k» ni «s»); la <strong>j</strong> siempre es «y» (nunca «j» española); la <strong>v</strong> es más suave, casi entre «v» y «u»; y la <strong>r</strong> puede funcionar como vocal, formando sílaba sin ninguna vocal a su lado — algo sin equivalente en español. Además, el croata tiene <strong>acento tonal</strong>: la misma sílaba puede sonar con tono ascendente o descendente, cambiando el significado. Los símbolos diacríticos en las transcripciones IPA de este sitio reflejan esos tonos.
   </div>
+  <p style="font-family:'Space Mono',monospace;font-size:.6rem;color:var(--ink-faint);margin-bottom:2rem;letter-spacing:.03em">Fuente: Wikipedia — <a href="https://en.wikipedia.org/wiki/Serbo-Croatian_phonology" target="_blank" rel="noopener" style="color:var(--blue)">Serbo-Croatian phonology</a> · <a href="https://en.wikipedia.org/wiki/Gaj%27s_Latin_alphabet" target="_blank" rel="noopener" style="color:var(--blue)">Gaj's Latin alphabet</a></p>
   <div class="speech-note" id="speechNote">
     🔊 <strong>Haga clic en cualquier palabra</strong> para escucharla pronunciada. Usa la síntesis de voz del navegador en croata.
   </div>
 
   <h3 style="font-family:'Playfair Display',serif;color:var(--blue-deep);margin-bottom:1rem;">Sonidos especiales del croata</h3>
   <div class="sound-guide">
-    <div class="sound-card" onclick="speak('čovjek','hr-HR')"><div class="sc-letter">č</div><div><div class="sc-ipa">/tʃ/</div><div class="sc-desc">Como «ch» en español: <em>mucho</em>. En el himno: <strong>junačka</strong>.</div><div class="sc-example">čovjek</div></div></div>
-    <div class="sound-card" onclick="speak('hrašće','hr-HR')"><div class="sc-letter">ć</div><div><div class="sc-ipa">/tɕ/</div><div class="sc-desc">Más suave y palatal que č. Como «ch» italiano en <em>ciao</em>. En el himno: <strong>hrašće</strong>.</div><div class="sc-example">hrašće</div></div></div>
-    <div class="sound-card" onclick="speak('šuma','hr-HR')"><div class="sc-letter">š</div><div><div class="sc-ipa">/ʃ/</div><div class="sc-desc">Como «sh» inglés: <em>she</em>. En el himno: <strong>naša</strong>, <strong>hrašće</strong>.</div><div class="sc-example">šuma</div></div></div>
-    <div class="sound-card" onclick="speak('živo','hr-HR',0.65)"><div class="sc-letter">ž</div><div><div class="sc-ipa">/ʒ/</div><div class="sc-desc">Como «j» francesa: <em>bonjour</em>. En el himno: <strong>živo</strong>.</div><div class="sc-example">živo</div></div></div>
-    <div class="sound-card" onclick="speak('zemlja','hr-HR')"><div class="sc-letter">lj</div><div><div class="sc-ipa">/ʎ/</div><div class="sc-desc">Como «ll» rioplatense o «gl» italiana: <em>figlio</em>. En el himno: <strong>zemljo</strong>, <strong>ljubi</strong>.</div><div class="sc-example">zemlja</div></div></div>
-    <div class="sound-card" onclick="speak('njiva','hr-HR')"><div class="sc-letter">nj</div><div><div class="sc-ipa">/ɲ/</div><div class="sc-desc">Exactamente como la «ñ» española. En el himno: <strong>njive</strong>, <strong>sinje</strong>.</div><div class="sc-example">njiva</div></div></div>
-    <div class="sound-card" onclick="speak('jelen','hr-HR')"><div class="sc-letter">j</div><div><div class="sc-ipa">/j/</div><div class="sc-desc">Siempre como «y» española en <em>yo</em>. En el himno: <strong>lijepa</strong>, <strong>jedina</strong>.</div><div class="sc-example">jelen</div></div></div>
-    <div class="sound-card" onclick="speak('voda','hr-HR')"><div class="sc-letter">v</div><div><div class="sc-ipa">/ʋ/</div><div class="sc-desc">Fricativa labiodental sonora, más suave que la «v» española. En el himno: <strong>naša domovino</strong>.</div><div class="sc-example">voda</div></div></div>
-    <div class="sound-card" onclick="speak('sunce','hr-HR')"><div class="sc-letter">c</div><div><div class="sc-ipa">/ts/</div><div class="sc-desc">Siempre africada «ts» como en <em>pizza</em>. En el himno: <strong>teci</strong>, <strong>reci</strong>, <strong>sunce</strong>.</div><div class="sc-example">sunce</div></div></div>
-    <div class="sound-card" onclick="speak('Hrvat','hr-HR')"><div class="sc-letter" style="font-size:1.4rem;letter-spacing:-.02em">r/r<sub style="font-size:.6em;color:var(--red)">̩</sub></div><div><div class="sc-ipa">/r̩/</div><div class="sc-desc">La r̩ es vocálica — núcleo de sílaba sin vocal. En el himno: <strong>Hrvat</strong>, <strong>srce</strong>, <strong>mrtve</strong>.</div><div class="sc-example">Hrvat</div></div></div>
+    <div class="sound-card" onclick="speak('junačka','hr-HR')"><div class="sc-letter">č</div><div><div class="sc-ipa">/tʃ/</div><div class="sc-desc">Como «ch» en español: <em>mucho</em>.</div><div class="sc-example"><em>junačka</em> — valerosa</div></div></div>
+    <div class="sound-card" onclick="speak('hrašće','hr-HR')"><div class="sc-letter">ć</div><div><div class="sc-ipa">/tɕ/</div><div class="sc-desc">Más suave que č. Parecido al «ch» italiano de <em>ciao</em>.</div><div class="sc-example"><em>hrašće</em> — robledal</div></div></div>
+    <div class="sound-card" onclick="speak('naša','hr-HR')"><div class="sc-letter">š</div><div><div class="sc-ipa">/ʃ/</div><div class="sc-desc">Como «sh» inglés: <em>she</em>.</div><div class="sc-example"><em>naša</em> — nuestra</div></div></div>
+    <div class="sound-card" onclick="speak('živo','hr-HR',0.65)"><div class="sc-letter">ž</div><div><div class="sc-ipa">/ʒ/</div><div class="sc-desc">Como la «j» francesa: <em>bonjour</em>.</div><div class="sc-example"><em>živo</em> — vivo</div></div></div>
+    <div class="sound-card" onclick="speak('zemljo','hr-HR')"><div class="sc-letter">lj</div><div><div class="sc-ipa">/ʎ/</div><div class="sc-desc">Como la «ll» chilena o la «gl» italiana: <em>figlio</em>.</div><div class="sc-example"><em>zemljo</em> — tierra</div></div></div>
+    <div class="sound-card" onclick="speak('njive','hr-HR')"><div class="sc-letter">nj</div><div><div class="sc-ipa">/ɲ/</div><div class="sc-desc">Exactamente como la «ñ» española.</div><div class="sc-example"><em>njive</em> — campos</div></div></div>
+    <div class="sound-card" onclick="speak('jedina','hr-HR')"><div class="sc-letter">j</div><div><div class="sc-ipa">/j/</div><div class="sc-desc">Siempre como la «y» de <em>yo</em>, nunca como «j» española.</div><div class="sc-example"><em>jedina</em> — única</div></div></div>
+    <div class="sound-card" onclick="speak('domovino','hr-HR')"><div class="sc-letter">v</div><div><div class="sc-ipa">/ʋ/</div><div class="sc-desc">Más suave que la «v» española, casi entre «v» y «u».</div><div class="sc-example"><em>domovino</em> — patria</div></div></div>
+    <div class="sound-card" onclick="speak('sunce','hr-HR')"><div class="sc-letter">c</div><div><div class="sc-ipa">/ts/</div><div class="sc-desc">Siempre suena «ts», como en <em>pizza</em>. Nunca como «k» ni «s».</div><div class="sc-example"><em>sunce</em> — sol</div></div></div>
+    <div class="sound-card" onclick="speak('Hrvat','hr-HR')"><div class="sc-letter">r</div><div><div class="sc-ipa">/r̥/</div><div class="sc-desc">La r croata puede ser <strong>silábica</strong>: en palabras como <em>Hrvat</em> o <em>srce</em>, la r forma sílaba entera sin ninguna vocal — suena con un brevísimo sonido de apoyo, como una «er» muy corta. Sin equivalente en español.</div><div class="sc-example"><em>Hrvat</em> — croata</div></div></div>
   </div>
 
   <h3 style="font-family:'Playfair Display',serif;color:var(--blue-deep);margin-bottom:1rem;margin-top:2.5rem;">Estrofa I — haga clic para escuchar</h3>
@@ -735,48 +798,65 @@ section[id]{scroll-margin-top:60px}
     <div class="section-divider" style="background:var(--gold)"></div>
   </div>
 
-  <div style="margin-bottom:2.5rem">
-    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Escuchar el himno</p>
-    <iframe
-      id="scPlayer"
-      width="100%"
-      height="120"
-      scrolling="no"
-      frameborder="no"
-      allow="autoplay"
-      style="border-radius:10px;display:block"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/347344221&color=%23c4973a&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false">
-    </iframe>
-    <p style="font-family:'Space Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.25);margin-top:.5rem;letter-spacing:.05em">World Anthems Orchestra · SoundCloud</p>
+  <!-- OPCIÓN A: Karaoke con timestamps -->
+  <div id="karaoke-view">
+    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.25rem">Karaoke — letra sincronizada</p>
+
+    <div class="audio-wrap" style="margin-bottom:1.5rem">
+      <audio id="hymnAudio" controls style="width:100%">
+        <source src="Lijepa_nasa_domovino_instrumental.ogg" type="audio/ogg">
+      </audio>
+      <p class="audio-credit">U.S. Navy Band · Dominio público · Wikimedia Commons</p>
+    </div>
+
+    <div id="karaoke-lines">
+      <div class="kr-line" data-start="1.0"  data-end="6.5" ><span class="kr-text">Lijepa naša domovino,</span><span class="kr-tr">Nuestra hermosa patria,</span></div>
+      <div class="kr-line" data-start="7.5"  data-end="13.5"><span class="kr-text">Oj, junačka zemljo mila,</span><span class="kr-tr">Oh, valerosa tierra querida,</span></div>
+      <div class="kr-line" data-start="14.0" data-end="20.5"><span class="kr-text">Stare slave djedovino,</span><span class="kr-tr">Herencia de antigua gloria ancestral,</span></div>
+      <div class="kr-line" data-start="21.0" data-end="27.0"><span class="kr-text">Da bi vazda sretna bila!</span><span class="kr-tr">¡Para que siempre seas feliz!</span></div>
+      <div class="kr-line" data-start="30.5" data-end="37.0"><span class="kr-text">Mila, kano si nam slavna,</span><span class="kr-tr">Querida, cuán gloriosa eres para nosotros,</span></div>
+      <div class="kr-line" data-start="37.5" data-end="43.5"><span class="kr-text">Mila, si nam ti jedina,</span><span class="kr-tr">Querida, eres tú nuestra única,</span></div>
+      <div class="kr-line" data-start="43.5" data-end="49.0"><span class="kr-text">Mila, kuda si nam ravna,</span><span class="kr-tr">Querida, cuán llana eres para nosotros,</span></div>
+      <div class="kr-line" data-start="50.0" data-end="57.5"><span class="kr-text">Mila, kuda si planina!</span><span class="kr-tr">¡Querida, cuán montañosa eres!</span></div>
+    </div>
+
+    <p style="font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.25);margin-top:1.5rem;letter-spacing:.05em">Si la sincronización no coincide exactamente, usa los controles del audio para ajustar.</p>
   </div>
 
-  <!-- Teleprompter -->
-  <div class="tp-container" id="tpContainer">
-    <div class="tp-line past" id="tp-past2"></div>
-    <div class="tp-line past" id="tp-past1"></div>
-    <div class="tp-line current" id="tp-current">Lijepa naša domovino,</div>
-    <div class="tp-translation" id="tp-tr">Nuestra hermosa patria,</div>
-    <div class="tp-line next1" id="tp-next1">Oj, junačka zemljo mila,</div>
-    <div class="tp-line next2" id="tp-next2">Stare slave djedovino,</div>
+  <!-- Teleprompter (mantener como alternativa) -->
+  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)">
+    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.25rem">Teleprompter — avance manual</p>
+
+    <div class="tp-container" id="tpContainer">
+      <div class="tp-line past" id="tp-past2"></div>
+      <div class="tp-line past" id="tp-past1"></div>
+      <div class="tp-line current" id="tp-current">Lijepa naša domovino,</div>
+      <div class="tp-translation" id="tp-tr">Nuestra hermosa patria,</div>
+      <div class="tp-line next1" id="tp-next1">Oj, junačka zemljo mila,</div>
+      <div class="tp-line next2" id="tp-next2">Stare slave djedovino,</div>
+    </div>
+
+    <div class="tp-controls">
+      <button class="tp-btn" onclick="tpPrev()">◀ Verso anterior</button>
+      <button class="tp-btn" onclick="tpReset()">↺ Reiniciar</button>
+      <button class="tp-btn primary" onclick="tpNext()">Verso siguiente ▶</button>
+    </div>
+    <p style="font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.25);text-align:center;margin-top:.75rem;letter-spacing:.05em">Avanza manualmente mientras escuchas el audio</p>
   </div>
 
-  <div class="tp-controls">
-    <button class="tp-btn" onclick="tpPrev()">◀ Ant.</button>
-    <button class="tp-btn primary" id="tpPlayBtn" onclick="tpToggle()">▶ Reproducir</button>
-    <button class="tp-btn" onclick="tpNext()">Sig. ▶</button>
-    <button class="tp-btn" onclick="tpReset()">↺ Reiniciar</button>
-    <div class="tp-speed">
-      <span>Tempo:</span>
-      <select id="tpSpeed" onchange="tpSetSpeed()">
-        <option value="4000">Lento</option>
-        <option value="2800" selected>Normal</option>
-        <option value="2000">Rápido</option>
-      </select>
+  <!-- YouTube videos -->
+  <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)">
+    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Videos para cantar — abren en YouTube</p>
+    <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:2.5rem">
+      <a class="yt-link" href="https://www.youtube.com/watch?v=3KZSAvGjuaQ" target="_blank" rel="noopener">▶ Versión oficial con letra — subtítulos en croata</a>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=EwzpVsloMKU" target="_blank" rel="noopener">▶ Interpretación orquestal — ambas estrofas</a>
+      <a class="yt-link" href="https://www.youtube.com/watch?v=1lvHpkndatM" target="_blank" rel="noopener">▶ Versión con letra en croata e inglés</a>
+      <a class="yt-link" href="https://www.youtube.com/results?search_query=Lijepa+nasa+domovino+karaoke" target="_blank" rel="noopener">▶ Buscar versiones karaoke en YouTube</a>
     </div>
   </div>
 
   <!-- Reference panels -->
-  <div style="margin-bottom:1rem">
+  <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)">
     <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:.08em;margin-bottom:.75rem;text-transform:uppercase">Vista de referencia</p>
     <div class="ref-tabs">
       <button class="ref-tab active" id="tab-est1" onclick="showEst(1,this)">Estrofa I</button>
@@ -810,6 +890,231 @@ section[id]{scroll-margin-top:60px}
 </section>
 </div>
 
+
+<!-- PRACTICAR -->
+<div id="practicar-wrap">
+<section id="practicar">
+  <div class="section-header">
+    <span class="section-num">05 — PRACTICAR</span>
+    <h2 class="section-title">Practica el himno</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <!-- Mode tabs -->
+  <div class="prac-tabs">
+    <button class="prac-tab active" onclick="setPracMode('versos',this)">Versos</button>
+    <button class="prac-tab" onclick="setPracMode('vocab',this)">Vocabulario</button>
+  </div>
+
+  <!-- MODE 1: Verse flashcards -->
+  <div id="prac-versos">
+    <p class="prac-desc">Se muestra la traducción al español. Recuerda el verso en croata, luego da vuelta la tarjeta.</p>
+    <div class="fc-card" id="fc-card" onclick="fcFlip()">
+      <div class="fc-inner" id="fc-inner">
+        <div class="fc-front">
+          <span class="fc-label">¿Cómo se dice en croata?</span>
+          <div class="fc-text" id="fc-front-text"></div>
+          <span class="fc-hint">Toca para ver</span>
+        </div>
+        <div class="fc-back">
+          <span class="fc-label">Verso en croata</span>
+          <div class="fc-text" id="fc-back-text"></div>
+          <div class="fc-ipa" id="fc-ipa-text"></div>
+        </div>
+      </div>
+    </div>
+    <div class="fc-controls">
+      <button class="fc-btn" onclick="fcPrev()">◀ Anterior</button>
+      <span class="fc-counter" id="fc-counter">1 / 16</span>
+      <button class="fc-btn primary" onclick="fcNext()">Siguiente ▶</button>
+    </div>
+    <div class="fc-progress">
+      <div class="fc-bar" id="fc-bar"></div>
+    </div>
+    <button class="fc-btn" onclick="fcShuffle()" style="margin:1rem auto;display:block;font-size:.65rem">↺ Mezclar tarjetas</button>
+  </div>
+
+  <!-- MODE 2: Vocabulary by category -->
+  <div id="prac-vocab" style="display:none">
+    <p class="prac-desc">Palabras del himno agrupadas por categoría. Toca cada tarjeta para ver su significado.</p>
+
+    <div class="vocab-cat">
+      <h3 class="vocab-cat-title">Sustantivos</h3>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>domovina</em></div>
+          <div class="vc-back"><strong>patria</strong><span>sust. fem. · vocativo: domovino</span><span class="vc-ex">«Lijepa naša <u>domovino</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>zemlja</em></div>
+          <div class="vc-back"><strong>tierra</strong><span>sust. fem. · vocativo: zemljo</span><span class="vc-ex">«junačka <u>zemljo</u> mila»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>slava</em></div>
+          <div class="vc-back"><strong>gloria</strong><span>sust. fem. · genitivo: slave</span><span class="vc-ex">«stare <u>slave</u> djedovino»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>djedovina</em></div>
+          <div class="vc-back"><strong>herencia ancestral</strong><span>sust. fem. · de djed (abuelo)</span><span class="vc-ex">«stare slave <u>djedovino</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>planina</em></div>
+          <div class="vc-back"><strong>montaña</strong><span>sust. fem.</span><span class="vc-ex">«kuda si <u>planina</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>more</em></div>
+          <div class="vc-back"><strong>mar</strong><span>sust. neutro · epíteto: sinje (azul marino)</span><span class="vc-ex">«sinje <u>more</u>, svijetu reci»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>narod</em></div>
+          <div class="vc-back"><strong>pueblo, nación</strong><span>sust. masc.</span><span class="vc-ex">«da svoj <u>narod</u> Hrvat ljubi»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>srce</em></div>
+          <div class="vc-back"><strong>corazón</strong><span>sust. neutro</span><span class="vc-ex">«dok mu živo <u>srce</u> bije»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>sunce</em></div>
+          <div class="vc-back"><strong>sol</strong><span>sust. neutro</span><span class="vc-ex">«dok mu njive <u>sunce</u> grije»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>bura</em></div>
+          <div class="vc-back"><strong>bura</strong><span>sust. fem. · viento frío del nordeste, típico del Adriático</span><span class="vc-ex">«dok mu hrašće <u>bura</u> vije»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>grobak</em></div>
+          <div class="vc-back"><strong>tumba</strong><span>sust. masc. · diminutivo de grob</span><span class="vc-ex">«dok mu mrtve <u>grobak</u> krije»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>sila</em></div>
+          <div class="vc-back"><strong>fuerza, potencia</strong><span>sust. fem. · acusativo: silu</span><span class="vc-ex">«nit' ti, Dunav, <u>silu</u> gubi»</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vocab-cat">
+      <h3 class="vocab-cat-title">Adjetivos</h3>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>lijep / lijepa</em></div>
+          <div class="vc-back"><strong>hermoso/a</strong><span>adj. · contiene <em>ije</em>, reflejo del fonema eslavo jat</span><span class="vc-ex">«<u>lijepa</u> naša domovino»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>mil / mila</em></div>
+          <div class="vc-back"><strong>querido/a, amado/a</strong><span>adj. · aparece 7 veces en el himno</span><span class="vc-ex">«<u>mila</u>, kano si nam slavna»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>junački / junačka</em></div>
+          <div class="vc-back"><strong>valeroso/a, heroico/a</strong><span>adj. · de junak (héroe)</span><span class="vc-ex">«oj, <u>junačka</u> zemljo mila»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>star / stara</em></div>
+          <div class="vc-back"><strong>antiguo/a, viejo/a</strong><span>adj. · genitivo: stare</span><span class="vc-ex">«<u>stare</u> slave djedovino»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>sretan / sretna</em></div>
+          <div class="vc-back"><strong>feliz, dichoso/a</strong><span>adj.</span><span class="vc-ex">«da bi vazda <u>sretna</u> bila»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>slavan / slavna</em></div>
+          <div class="vc-back"><strong>glorioso/a, célebre</strong><span>adj. · de slava (gloria)</span><span class="vc-ex">«kano si nam <u>slavna</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>ravan / ravna</em></div>
+          <div class="vc-back"><strong>llano/a, plano/a</strong><span>adj. · alude a las llanuras de Eslavonia</span><span class="vc-ex">«kuda si nam <u>ravna</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>sinje</em></div>
+          <div class="vc-back"><strong>azul marino, grisáceo</strong><span>adj. · epíteto poético del mar Adriático</span><span class="vc-ex">«<u>sinje</u> more, svijetu reci»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>živ / živo</em></div>
+          <div class="vc-back"><strong>vivo/a, viviente</strong><span>adj.</span><span class="vc-ex">«dok mu <u>živo</u> srce bije»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>mrtav / mrtve</em></div>
+          <div class="vc-back"><strong>muerto/a</strong><span>adj. usado como sust. · acusativo plural</span><span class="vc-ex">«dok mu <u>mrtve</u> grobak krije»</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vocab-cat">
+      <h3 class="vocab-cat-title">Verbos</h3>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>biti — biti</em></div>
+          <div class="vc-back"><strong>ser / estar</strong><span>verbo · bila = condicional I fem.</span><span class="vc-ex">«da bi vazda sretna <u>bila</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>teći</em></div>
+          <div class="vc-back"><strong>fluir, correr (agua)</strong><span>verbo · imperativo: teci</span><span class="vc-ex">«<u>teci</u>, Dravo, Savo, <u>teci</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>gubiti</em></div>
+          <div class="vc-back"><strong>perder</strong><span>verbo · gubi = 3ª pers. sing. pres.</span><span class="vc-ex">«nit' ti, Dunav, silu <u>gubi</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>reći</em></div>
+          <div class="vc-back"><strong>decir, contar</strong><span>verbo · imperativo: reci</span><span class="vc-ex">«sinje more, svijetu <u>reci</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>ljubiti</em></div>
+          <div class="vc-back"><strong>amar</strong><span>verbo · ljubi = 3ª pers. sing. pres.</span><span class="vc-ex">«da svoj narod Hrvat <u>ljubi</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>grijati</em></div>
+          <div class="vc-back"><strong>calentar</strong><span>verbo · grije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu njive sunce <u>grije</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>vijati</em></div>
+          <div class="vc-back"><strong>azotar, agitar</strong><span>verbo · vije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu hrašće bura <u>vije</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>kriti</em></div>
+          <div class="vc-back"><strong>esconder, cobĳar</strong><span>verbo · krije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu mrtve grobak <u>krije</u>»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>biti</em></div>
+          <div class="vc-back"><strong>latir, golpear</strong><span>verbo (≠ biti = ser) · bije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu živo srce <u>bije</u>»</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="vocab-cat">
+      <h3 class="vocab-cat-title">Palabras arcaicas y poéticas</h3>
+      <div class="vocab-grid">
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>vazda</em></div>
+          <div class="vc-back"><strong>siempre</strong><span>arcaísmo · moderno: uvijek</span><span class="vc-ex">«da bi <u>vazda</u> sretna bila»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>kano</em></div>
+          <div class="vc-back"><strong>cuán, como</strong><span>arcaísmo · moderno: kako</span><span class="vc-ex">«mila, <u>kano</u> si nam slavna»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>kuda</em></div>
+          <div class="vc-back"><strong>cuán</strong><span>arcaísmo poético · moderno: kako/koliko</span><span class="vc-ex">«mila, <u>kuda</u> si nam ravna»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>nit' / niti</em></div>
+          <div class="vc-back"><strong>ni, tampoco</strong><span>conjunción negativa · nit' es apócope</span><span class="vc-ex">«<u>nit'</u> ti, Dunav, silu gubi»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>oj</em></div>
+          <div class="vc-back"><strong>¡oh! / ¡ey!</strong><span>interjección eslava de llamado emotivo</span><span class="vc-ex">«<u>oj</u>, junačka zemljo mila»</span></div>
+        </div>
+        <div class="vocab-card" onclick="vcFlip(this)">
+          <div class="vc-front"><em>da bi … bila</em></div>
+          <div class="vc-back"><strong>ojalá fueras / para que seas</strong><span>condicional I (kondicional I) con valor desiderativo</span><span class="vc-ex">«<u>da bi</u> vazda sretna <u>bila</u>»</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-top-btn" onclick="scrollToTop()">↑ Volver al inicio</button>
+</section>
+</div>
+
 <!-- FOOTER -->
 <footer>
   <p>🇭🇷 <span>Lijepa naša domovino</span> · Himno Nacional de Croacia</p>
@@ -827,7 +1132,7 @@ function scrollToTop() {
 
 // ── ACTIVE NAV ──
 const navLinks = document.querySelectorAll('.topnav-link');
-const sectionIds = ['historia','letra','pronunciacion','cantar'];
+const sectionIds = ['historia','letra','pronunciacion','cantar','practicar'];
 function updateActiveNav() {
   const scrollY = window.scrollY + 120;
   let active = '';
@@ -942,9 +1247,6 @@ const VERSES = [
 ];
 
 let tpIdx = 0;
-let tpTimer = null;
-let tpPlaying = false;
-let tpDur = 2800;
 
 function tpRender() {
   const p2 = document.getElementById('tp-past2');
@@ -961,57 +1263,90 @@ function tpRender() {
   n2.textContent  = tpIdx+2 < VERSES.length ? VERSES[tpIdx+2].text : '';
 }
 
-function tpToggle() {
-  tpPlaying = !tpPlaying;
-  const btn = document.getElementById('tpPlayBtn');
-  if (tpPlaying) {
-    btn.textContent = '⏸ Pausar';
-    tpAdvance();
-  } else {
-    btn.textContent = '▶ Reproducir';
-    clearTimeout(tpTimer);
-  }
-}
-
-function tpAdvance() {
-  if (!tpPlaying) return;
-  tpTimer = setTimeout(() => {
-    if (tpIdx < VERSES.length - 1) {
-      tpIdx++;
-      tpRender();
-      tpAdvance();
-    } else {
-      tpPlaying = false;
-      document.getElementById('tpPlayBtn').textContent = '▶ Reproducir';
-    }
-  }, tpDur);
-}
-
 function tpNext() {
   if (tpIdx < VERSES.length - 1) { tpIdx++; tpRender(); }
-  if (tpPlaying) { clearTimeout(tpTimer); tpAdvance(); }
 }
 
 function tpPrev() {
   if (tpIdx > 0) { tpIdx--; tpRender(); }
-  if (tpPlaying) { clearTimeout(tpTimer); tpAdvance(); }
 }
 
 function tpReset() {
-  clearTimeout(tpTimer);
-  tpPlaying = false;
   tpIdx = 0;
-  document.getElementById('tpPlayBtn').textContent = '▶ Reproducir';
   tpRender();
 }
 
-function tpSetSpeed() {
-  tpDur = parseInt(document.getElementById('tpSpeed').value);
-  if (tpPlaying) { clearTimeout(tpTimer); tpAdvance(); }
+tpRender();
+
+// ── PRACTICAR: FLASHCARDS ──
+const FC_VERSES = [
+  {front:'Nuestra hermosa patria,',                    back:'Lijepa naša domovino,',         ipa:'[ljěː.pa nâ.ʃa do.mǒ.ʋi.no]'},
+  {front:'Oh, valerosa tierra querida,',               back:'Oj, junačka zemljo mila,',      ipa:'[oj jǔ.naːtʃ.kaː zêm.ʎoː mǐ.la]'},
+  {front:'Herencia de antigua gloria ancestral,',      back:'Stare slave djedovino,',         ipa:'[stâː.re slâ.ʋeː djê.do.ʋi.no]'},
+  {front:'¡Para que siempre seas feliz!',              back:'Da bi vazda sretna bila!',       ipa:'[dâ bi ʋâz.da srět.na bǐː.la]'},
+  {front:'Querida, cuán gloriosa eres para nosotros,', back:'Mila, kano si nam slavna,',     ipa:'[mǐ.la kâː.no si nâm slâːʋ.na]'},
+  {front:'Querida, eres tú nuestra única,',            back:'Mila, si nam ti jedina,',       ipa:'[mǐ.la si nâm tî jě.diː.naː]'},
+  {front:'Querida, cuán llana eres para nosotros,',    back:'Mila, kuda si nam ravna,',      ipa:'[mǐ.la kǔ.daː si nâm rǎːʋ.na]'},
+  {front:'¡Querida, cuán montañosa eres!',             back:'Mila, kuda si planina!',        ipa:'[mǐ.la kǔ.daː si pla.nǐ.na]'},
+  {front:'Fluye, Drava, Sava, fluye,',                 back:'Teci, Dravo, Savo, teci,',      ipa:'[tě.tsi drâː.ʋo sâː.ʋo tě.tsi]'},
+  {front:'Ni tú, Danubio, pierdas tu fuerza,',         back:"Nit' ti, Dunav, silu gubi,",   ipa:'[nit tî dǔ.naʋ sî.lu gǔ.biː]'},
+  {front:'Mar azul, di al mundo',                      back:'Sinje more, svijetu reci',       ipa:'[sîː.ɲeː môː.re sʋjěː.tu rê.tsi]'},
+  {front:'Que el croata ama a su pueblo',              back:'Da svoj narod Hrvat ljubi',      ipa:'[da sʋôːj nǎː.rod xř̩.ʋaːt ʎûː.biː]'},
+  {front:'Mientras el sol calienta sus campos,',       back:'Dok mu njive sunce grije,',      ipa:'[dôk mu ɲî.ʋe sûːn.tse grî.jeː]'},
+  {front:'Mientras la bura azota sus robledales,',     back:'Dok mu hrašće bura vije,',      ipa:'[dôk mu xr̩âʃ.tɕe bû.ra ʋî.jeː]'},
+  {front:'Mientras la tumba cobija a sus muertos,',    back:'Dok mu mrtve grobak krije,',     ipa:'[dôk mu mř̩t.ʋe grô.bak krî.jeː]'},
+  {front:'¡Mientras su corazón vivo late!',            back:'Dok mu živo srce bije!',         ipa:'[dôk mu ʒǐː.ʋo sr̩̂.tse bǐ.je]'},
+];
+
+let fcOrder = FC_VERSES.map((_,i)=>i);
+let fcIdx = 0;
+
+function fcRender() {
+  const d = FC_VERSES[fcOrder[fcIdx]];
+  document.getElementById('fc-front-text').textContent = d.front;
+  document.getElementById('fc-back-text').textContent  = d.back;
+  document.getElementById('fc-ipa-text').textContent   = d.ipa;
+  document.getElementById('fc-counter').textContent    = (fcIdx+1) + ' / ' + fcOrder.length;
+  document.getElementById('fc-bar').style.width        = ((fcIdx+1)/fcOrder.length*100) + '%';
+  document.getElementById('fc-inner').classList.remove('flipped');
 }
 
-// Init teleprompter
-tpRender();
+function fcFlip() {
+  document.getElementById('fc-inner').classList.toggle('flipped');
+}
+
+function fcNext() {
+  if(fcIdx < fcOrder.length-1){ fcIdx++; fcRender(); }
+}
+
+function fcPrev() {
+  if(fcIdx > 0){ fcIdx--; fcRender(); }
+}
+
+function fcShuffle() {
+  for(let i=fcOrder.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [fcOrder[i],fcOrder[j]]=[fcOrder[j],fcOrder[i]];
+  }
+  fcIdx=0; fcRender();
+}
+
+// ── PRACTICAR: VOCAB CARDS ──
+function vcFlip(el) {
+  el.classList.toggle('open');
+}
+
+// ── PRACTICAR: MODE SWITCH ──
+function setPracMode(mode, btn) {
+  document.querySelectorAll('.prac-tab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('prac-versos').style.display = mode==='versos' ? 'block' : 'none';
+  document.getElementById('prac-vocab').style.display  = mode==='vocab'  ? 'block' : 'none';
+}
+
+// Init flashcards
+fcRender();
+
 
 // ── REF TABS ──
 function showEst(n, btn) {
@@ -1020,6 +1355,36 @@ function showEst(n, btn) {
   btn.classList.add('active');
   document.getElementById('ref-est' + n).classList.add('active');
 }
+
+// ── KARAOKE SYNC ──
+(function(){
+  var audio = document.getElementById('hymnAudio');
+  if(!audio) return;
+  var lines = document.querySelectorAll('.kr-line');
+
+  audio.addEventListener('timeupdate', function(){
+    var t = audio.currentTime;
+    lines.forEach(function(line){
+      var start = parseFloat(line.dataset.start);
+      var end   = parseFloat(line.dataset.end);
+      line.classList.remove('active','done');
+      if(t >= start && t < end){
+        line.classList.add('active');
+        // scroll into view smoothly
+        line.scrollIntoView({behavior:'smooth', block:'nearest'});
+      } else if(t >= end){
+        line.classList.add('done');
+      }
+    });
+  });
+
+  audio.addEventListener('seeked', function(){
+    // re-trigger timeupdate manually
+    var e = new Event('timeupdate');
+    audio.dispatchEvent(e);
+  });
+})();
+
 </script>
 </body>
 </html>
