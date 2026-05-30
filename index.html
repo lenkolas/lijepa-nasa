@@ -104,6 +104,7 @@ section{padding:6rem 2rem 5rem;max-width:900px;margin:0 auto}
 .pw-original{display:block;font-family:'Playfair Display',serif;font-size:1rem;font-style:italic;color:var(--ink);margin-bottom:.2rem}
 .pw-ipa{display:block;font-family:'Space Mono',monospace;font-size:.65rem;color:var(--blue);margin-bottom:.15rem}
 .pw-clic{display:block;font-family:'Space Mono',monospace;font-size:.55rem;color:var(--ink-faint);letter-spacing:.05em}
+.pw-meaning{display:block;font-size:.75rem;color:var(--ink-light);margin-top:.2rem;border-top:1px solid var(--border);padding-top:.2rem}
 .phon-word.playing{border-color:var(--gold);background:rgba(196,151,58,.08)}
 
 /* ── CANTAR ── */
@@ -136,12 +137,12 @@ section{padding:6rem 2rem 5rem;max-width:900px;margin:0 auto}
 .ref-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border-bottom:1px solid rgba(255,255,255,.05)}
 .ref-row:last-child{border-bottom:none}
 .ref-row:first-child{background:rgba(196,151,58,.1)}
-.ref-cell{padding:.6rem .9rem;font-size:.82rem;color:rgba(255,255,255,.75);line-height:1.5}
+.ref-cell{padding:.75rem 1rem;font-size:.92rem;color:rgba(255,255,255,.75);line-height:1.6}
 .ref-cell:not(:last-child){border-right:1px solid rgba(255,255,255,.05)}
-.ref-cell.hr{font-family:'Playfair Display',serif;font-style:italic;color:var(--white)}
-.ref-cell.ipa{font-family:'Space Mono',monospace;font-size:.62rem;color:var(--gold-light)}
-.ref-cell.es{color:rgba(255,255,255,.55);font-size:.78rem}
-.ref-head{font-family:'Space Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-style:normal}
+.ref-cell.hr{font-family:'Playfair Display',serif;font-style:italic;color:var(--white);font-size:1rem}
+.ref-cell.ipa{font-family:'Space Mono',monospace;font-size:.72rem;color:var(--gold-light)}
+.ref-cell.es{color:rgba(255,255,255,.6);font-size:.88rem}
+.ref-head{font-family:'Space Mono',monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-style:normal}
 audio{color-scheme:dark}
 audio::-webkit-media-controls-panel{background:rgba(255,255,255,.08)}
 .audio-wrap{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1.25rem 1.5rem}
@@ -160,20 +161,13 @@ section[id]{scroll-margin-top:60px}
 
 /* ── KARAOKE ── */
 #karaoke-lines{display:flex;flex-direction:column;gap:.5rem}
-.kr-line{padding:.9rem 1.25rem;border-radius:8px;border-left:3px solid rgba(255,255,255,.08);background:rgba(0,0,0,.25);transition:all .35s ease;cursor:default}
-.kr-line.active{border-left-color:var(--gold);background:rgba(196,151,58,.12);transform:translateX(6px)}
-.kr-line.done{opacity:.35}
-.kr-text{display:block;font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;color:rgba(255,255,255,.5);transition:color .35s}
-.kr-line.active .kr-text{color:var(--gold-light);font-size:1.35rem}
-.kr-tr{display:block;font-size:.78rem;color:rgba(255,255,255,.25);margin-top:.2rem;transition:color .35s}
-.kr-line.active .kr-tr{color:rgba(255,255,255,.55)}
-
 /* ── PRACTICAR ── */
 #practicar-wrap{background:var(--cream)}
 #practicar-wrap .section-title{color:var(--blue-deep)}
-.prac-tabs{display:flex;gap:.5rem;margin-bottom:2rem}
-.prac-tab{font-family:'Space Mono',monospace;font-size:.7rem;padding:.5rem 1.2rem;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--ink-faint);cursor:pointer;letter-spacing:.05em;transition:all .2s}
-.prac-tab.active{background:var(--blue-deep);border-color:var(--blue-deep);color:#fff}
+.prac-tabs{display:flex;gap:.75rem;margin-bottom:2.5rem}
+.prac-tab{font-family:'Space Mono',monospace;font-size:.75rem;padding:.75rem 1.4rem;border-radius:6px;border:2px solid var(--border);background:var(--white);color:var(--ink-light);cursor:pointer;letter-spacing:.04em;transition:all .2s;flex:1;text-align:center}
+.prac-tab:hover{border-color:var(--blue);color:var(--blue)}
+.prac-tab.active{background:var(--blue-deep);border-color:var(--blue-deep);color:#fff;font-weight:600}
 .prac-desc{font-size:.88rem;color:var(--ink-light);margin-bottom:1.75rem;line-height:1.6}
 
 /* Flashcards */
@@ -212,6 +206,96 @@ section[id]{scroll-margin-top:60px}
 .vocab-card .vc-back strong{color:var(--gold-light);font-size:.95rem}
 .vocab-card .vc-back span{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.4}
 .vocab-card .vc-back .vc-ex{font-family:'Playfair Display',serif;font-style:italic;color:rgba(255,255,255,.75);font-size:.82rem;margin-top:.2rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.3rem}
+
+
+/* ── PRACTICAR ── */
+#practicar-wrap{background:var(--cream)}
+#practicar-wrap .section-title{color:var(--blue-deep)}
+.prac-tabs{display:flex;gap:.75rem;margin-bottom:2.5rem}
+.prac-tab{font-family:'Space Mono',monospace;font-size:.75rem;padding:.75rem 1.4rem;border-radius:6px;border:2px solid var(--border);background:var(--white);color:var(--ink-light);cursor:pointer;letter-spacing:.04em;transition:all .2s;flex:1;text-align:center}
+.prac-tab:hover{border-color:var(--blue);color:var(--blue)}
+.prac-tab.active{background:var(--blue-deep);border-color:var(--blue-deep);color:#fff;font-weight:600}
+.prac-desc{font-size:.88rem;color:var(--ink-light);margin-bottom:1.75rem;line-height:1.6}
+.fc-card{perspective:1000px;height:180px;cursor:pointer;margin-bottom:1.5rem;user-select:none}
+.fc-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .5s ease}
+.fc-inner.flipped{transform:rotateY(180deg)}
+.fc-front,.fc-back{position:absolute;inset:0;backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:1.5rem;text-align:center;gap:.5rem}
+.fc-front{background:var(--white);border:2px solid var(--border)}
+.fc-back{background:var(--blue-deep);border:2px solid var(--blue);transform:rotateY(180deg)}
+.fc-label{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--ink-faint);letter-spacing:.1em;text-transform:uppercase}
+.fc-back .fc-label{color:rgba(255,255,255,.4)}
+.fc-text{font-family:'Playfair Display',serif;font-size:1.25rem;font-style:italic;color:var(--ink);line-height:1.4}
+.fc-back .fc-text{color:var(--gold-light)}
+.fc-ipa{font-family:'Space Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.5);margin-top:.25rem}
+.fc-hint{font-family:'Space Mono',monospace;font-size:.58rem;color:var(--ink-faint);letter-spacing:.08em}
+.fc-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.75rem}
+.fc-counter{font-family:'Space Mono',monospace;font-size:.7rem;color:var(--ink-faint)}
+.fc-btn{font-family:'Space Mono',monospace;font-size:.65rem;padding:.5rem 1rem;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--ink-light);cursor:pointer;letter-spacing:.05em;transition:all .2s}
+.fc-btn:hover{border-color:var(--blue);color:var(--blue)}
+.fc-btn.primary{background:var(--blue-deep);border-color:var(--blue-deep);color:#fff}
+.fc-btn.primary:hover{background:var(--blue-light)}
+.fc-progress{height:4px;background:var(--border);border-radius:2px;overflow:hidden;margin-bottom:.5rem}
+.fc-bar{height:100%;background:var(--gold);border-radius:2px;transition:width .3s ease}
+.vocab-cat{margin-bottom:2.5rem}
+.vocab-cat-title{font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--blue-deep);margin-bottom:1rem;padding-bottom:.4rem;border-bottom:2px solid var(--gold);display:inline-block}
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.75rem}
+.vocab-card{background:var(--white);border:1px solid var(--border);border-radius:8px;min-height:90px;cursor:pointer;user-select:none}
+.vocab-card .vc-front,.vocab-card .vc-back{padding:.85rem 1rem;border-radius:8px;transition:all .3s;display:flex;flex-direction:column;gap:.3rem}
+.vocab-card .vc-front{display:flex;align-items:center;justify-content:center;text-align:center;min-height:90px}
+.vocab-card .vc-front em{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--ink)}
+.vocab-card .vc-back{display:none;background:var(--blue-deep);border-radius:8px}
+.vocab-card.open .vc-front{display:none}
+.vocab-card.open .vc-back{display:flex}
+.vocab-card .vc-back strong{color:var(--gold-light);font-size:.95rem}
+.vocab-card .vc-back span{font-size:.75rem;color:rgba(255,255,255,.5);line-height:1.4}
+.vocab-card .vc-back .vc-ex{font-family:'Playfair Display',serif;font-style:italic;color:rgba(255,255,255,.75);font-size:.82rem;margin-top:.2rem;border-top:1px solid rgba(255,255,255,.1);padding-top:.3rem}
+
+
+/* ── DRAG & DROP ── */
+.prac-subtabs{display:flex;gap:.5rem;margin-bottom:1.5rem}
+.prac-subtab{font-family:'Space Mono',monospace;font-size:.68rem;padding:.5rem 1rem;border-radius:4px;border:1px solid var(--border);background:transparent;color:var(--ink-faint);cursor:pointer;transition:all .2s;flex:1;text-align:center}
+.prac-subtab.active{background:var(--blue);border-color:var(--blue);color:#fff}
+.drag-item{padding:.85rem 1.1rem;margin-bottom:.5rem;background:var(--white);border:1.5px solid var(--border);border-radius:8px;cursor:grab;display:flex;align-items:center;gap:.75rem;transition:all .2s;user-select:none}
+.drag-item:active{cursor:grabbing}
+.drag-item.dragging{opacity:.4;border-style:dashed}
+.drag-item.over{border-color:var(--blue);background:rgba(27,63,122,.04)}
+.drag-item.correct{border-color:#22a06b;background:rgba(34,160,107,.07);cursor:default}
+.drag-item.wrong{border-color:var(--red);background:rgba(185,28,46,.06)}
+.drag-num{font-family:'Space Mono',monospace;font-size:.6rem;color:var(--ink-faint);min-width:1.4rem}
+.drag-text{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--ink)}
+.drag-handle{color:var(--ink-faint);font-size:.9rem;margin-left:auto;cursor:grab}
+.drag-item.correct .drag-num{color:#22a06b}
+.drag-item.correct .drag-text{color:#1a7a52}
+/* ── MATCHING ── */
+.match-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem}
+.match-card{padding:.75rem 1rem;border-radius:8px;border:1.5px solid var(--border);background:var(--white);cursor:pointer;transition:all .2s;font-size:.88rem;line-height:1.5;text-align:center}
+.match-card.hr-card{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:var(--ink)}
+.match-card.es-card{color:var(--ink-light)}
+.match-card.selected{border-color:var(--blue);background:rgba(27,63,122,.06);transform:scale(1.02)}
+.match-card.matched{border-color:#22a06b;background:rgba(34,160,107,.08);opacity:.5;cursor:default;pointer-events:none}
+.match-card.wrong-flash{border-color:var(--red);background:rgba(185,28,46,.07)}
+
+
+/* ── ESCUCHA Y ELIGE ── */
+.listen-opt{display:block;width:100%;padding:.85rem 1.1rem;background:var(--white);border:1.5px solid var(--border);border-radius:8px;cursor:pointer;font-family:'Playfair Display',serif;font-style:italic;font-size:.98rem;color:var(--ink);text-align:left;transition:all .2s;margin:0}
+.listen-opt:hover:not(:disabled){border-color:var(--blue);background:rgba(27,63,122,.04)}
+.listen-opt.listen-correct{border-color:#22a06b;background:rgba(34,160,107,.08);color:#1a7a52}
+.listen-opt.listen-wrong{border-color:var(--red);background:rgba(185,28,46,.06);color:var(--red)}
+.listen-opt:disabled{cursor:default}
+
+
+/* ── CANTAR LETRA ── */
+.cantar-audio-wrap{background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:3rem}
+.cantar-audio-label{font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem}
+.cantar-letra{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+@media(max-width:640px){.cantar-letra{grid-template-columns:1fr}}
+.cantar-estrofa{background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:1.75rem 1.5rem}
+.cantar-estrofa-label{font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1.5rem}
+.cantar-versos{display:flex;flex-direction:column;gap:1.1rem}
+.cantar-verso{display:flex;flex-direction:column;gap:.2rem;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,.05)}
+.cantar-verso:last-child{border-bottom:none;padding-bottom:0}
+.cv-hr{font-family:'Playfair Display',serif;font-style:italic;font-size:1.2rem;color:var(--white);line-height:1.4;letter-spacing:.01em}
+.cv-es{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.4}
 
 </style>
 </head>
@@ -373,7 +457,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>Lijepa</em> <span class="gp-sep">—</span> hermosa</span>
           <span class="gp-item"><em>naša</em> <span class="gp-sep">—</span> nuestra</span>
           <span class="gp-item"><em>domovino</em> <span class="gp-sep">—</span> patria</span>
-        </div><div class="gp-note"><strong>Vocativo:</strong> «domovino» — el poeta habla <em>a</em> la patria, no <em>de</em> ella. Vocativo femenino: -a → -o. «Lijepa» contiene <em>ije</em> (pronunciado «ye»), el reflejo del antiguo fonema eslavo <em>jat</em>.</div>
+        </div><div class="gp-note"><strong>Vocativo:</strong> forma de llamado directo — el poeta habla <em>a</em> la patria, no <em>de</em> ella. Vocativo femenino en croata: -a → -o. <strong>Lijepa</strong> contiene <em>ije</em> (pronunciado «ye»), reflejo del antiguo fonema eslavo <em>jat</em>.</div>
       </div>
     </div>
 
@@ -388,7 +472,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>junačka</em> <span class="gp-sep">—</span> valerosa</span>
           <span class="gp-item"><em>zemljo</em> <span class="gp-sep">—</span> tierra</span>
           <span class="gp-item"><em>mila</em> <span class="gp-sep">—</span> querida</span>
-        </div><div class="gp-note"><strong>Oj</strong> = interjección eslava de llamado emotivo · <strong>junačka</strong> de <em>junak</em> (héroe) · <strong>zemljo</strong> vocativo de <em>zemlja</em> (tierra) · el tono épico se establece desde el primer verso.</div>
+        </div><div class="gp-note"><strong>Oj</strong> = interjección eslava de llamado emotivo · <strong>junačka</strong> deriva de <em>junak</em> (héroe) · <strong>zemljo</strong> es el vocativo de <em>zemlja</em> (tierra).</div>
       </div>
     </div>
 
@@ -402,7 +486,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>Stare</em> <span class="gp-sep">—</span> antigua</span>
           <span class="gp-item"><em>slave</em> <span class="gp-sep">—</span> de gloria</span>
           <span class="gp-item"><em>djedovino</em> <span class="gp-sep">—</span> herencia ancestral</span>
-        </div><div class="gp-note"><strong>Djedovino</strong> de <em>djed</em> (abuelo) — la patria como herencia de los antepasados. El sintagma genitivo <em>stare slave</em> (de la antigua gloria) complementa al vocativo <em>djedovino</em>, añadiendo profundidad histórica a la invocación.</div>
+        </div><div class="gp-note"><strong>Djedovino</strong> deriva de <em>djed</em> (abuelo). El sintagma genitivo <em>stare slave</em> (de la antigua gloria) complementa al vocativo <em>djedovino</em>.</div>
       </div>
     </div>
 
@@ -417,7 +501,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>vazda</em> <span class="gp-sep">—</span> siempre</span>
           <span class="gp-item"><em>sretna</em> <span class="gp-sep">—</span> feliz</span>
           <span class="gp-item"><em>bila</em> <span class="gp-sep">—</span> fueras / seas</span>
-        </div><div class="gp-note"><strong>Da bi…bila</strong> es el condicional I del croata (kondicional I), equivalente funcional al subjuntivo español en contextos desiderativos — expresa un deseo, no un hecho. <strong>Vazda</strong> es arcaísmo poético de <em>uvijek</em> (siempre), que da solemnidad al verso.</div>
+        </div><div class="gp-note"><strong>Da bi…bila</strong> es el condicional I del croata (kondicional I), equivalente funcional al subjuntivo español en contextos desiderativos — expresa un deseo, no un hecho. <strong>Vazda</strong> es arcaísmo de <em>uvijek</em> (siempre).</div>
       </div>
     </div>
 
@@ -432,7 +516,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>kano</em> <span class="gp-sep">—</span> cuán / como</span>
           <span class="gp-item"><em>nam</em> <span class="gp-sep">—</span> para nosotros</span>
           <span class="gp-item"><em>slavna</em> <span class="gp-sep">—</span> gloriosa</span>
-        </div><div class="gp-note"><strong>Kano</strong> = arcaísmo poético de <em>kako</em> (cuán). El pronombre dativo <strong>nam</strong> indica a quién pertenece esa gloria — a nosotros, el pueblo croata.</div>
+        </div><div class="gp-note"><strong>Kano</strong> = arcaísmo de <em>kako</em> (cuán). <strong>Nam</strong> es el pronombre dativo de primera persona plural (para nosotros).</div>
       </div>
     </div>
 
@@ -446,7 +530,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>si</em> <span class="gp-sep">—</span> eres</span>
           <span class="gp-item"><em>ti</em> <span class="gp-sep">—</span> tú (énfasis)</span>
           <span class="gp-item"><em>jedina</em> <span class="gp-sep">—</span> única, la sola</span>
-        </div><div class="gp-note">El pronombre enfático <strong>ti</strong> (tú) subraya la exclusividad — entre todas las tierras posibles, esta es <em>la única</em>. Estructura: nam (para nosotros) + ti (tú) + jedina (única).</div>
+        </div><div class="gp-note"><strong>Ti</strong> es el pronombre personal de segunda persona singular en forma enfática. <strong>Jedina</strong> (única, la sola) concuerda en género femenino con el sujeto implícito (la patria).</div>
       </div>
     </div>
 
@@ -459,7 +543,7 @@ section[id]{scroll-margin-top:60px}
         <div class="gp-words">
           <span class="gp-item"><em>kuda</em> <span class="gp-sep">—</span> cuán</span>
           <span class="gp-item"><em>ravna</em> <span class="gp-sep">—</span> llana, plana</span>
-        </div><div class="gp-note"><strong>Ravna</strong> alude a las llanuras de Eslavonia y la Panonia croata — los campos fértiles del este del país. El contraste con el verso siguiente (planina) describe la diversidad geográfica.</div>
+        </div><div class="gp-note"><strong>Ravna</strong> (llana, plana) es adjetivo predicativo que describe el terreno. Alude a las llanuras de Eslavonia y la Panonia croata.</div>
       </div>
     </div>
 
@@ -471,7 +555,7 @@ section[id]{scroll-margin-top:60px}
       <div class="grammar-panel">
         <div class="gp-words">
           <span class="gp-item"><em>planina</em> <span class="gp-sep">—</span> montaña</span>
-        </div><div class="gp-note"><strong>Planina</strong> alude a los Alpes Dináricos y el interior montañoso de Croacia. Aquí <em>planina</em> funciona como predicativo — «eres montaña» — con una elipsis poética. Cierre de la primera estrofa con signo de exclamación.</div>
+        </div><div class="gp-note"><strong>Planina</strong> (montaña) funciona como predicativo nominal — «eres montaña» — con elipsis del adjetivo. Alude a los Alpes Dináricos y el interior montañoso de Croacia.</div>
       </div>
     </div>
   </div>
@@ -490,7 +574,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>Teci</em> <span class="gp-sep">—</span> fluye</span>
           <span class="gp-item"><em>Dravo</em> <span class="gp-sep">—</span> río Drava</span>
           <span class="gp-item"><em>Savo</em> <span class="gp-sep">—</span> río Sava</span>
-        </div><div class="gp-note">La Drava y el Sava son los dos grandes ríos de Croacia; ambos desembocan en el Danubio de forma independiente, en puntos distintos. El imperativo les da agencia poética — el poeta les ordena fluir, afirmando su papel en la identidad del país.</div>
+        </div><div class="gp-note">La Drava y el Sava desembocan en el Danubio de forma independiente, en puntos distintos. <strong>Teci</strong> es el imperativo de <em>teći</em> (fluir), dirigido a los ríos en vocativo.</div>
       </div>
     </div>
 
@@ -505,7 +589,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>Dunav</em> <span class="gp-sep">—</span> Danubio</span>
           <span class="gp-item"><em>silu</em> <span class="gp-sep">—</span> fuerza</span>
           <span class="gp-item"><em>gubi</em> <span class="gp-sep">—</span> no pierdas</span>
-        </div><div class="gp-note"><strong>Nit'</strong> = apócope de <em>niti</em> (ni). El Danubio, el río más largo de Europa central, se invoca como símbolo de fortaleza y permanencia del pueblo croata.</div>
+        </div><div class="gp-note"><strong>Nit'</strong> = apócope de <em>niti</em> (ni, tampoco). <strong>Silu gubi</strong> es un imperativo negativo: «no pierdas la fuerza» — <em>sila</em> (fuerza) en acusativo.</div>
       </div>
     </div>
 
@@ -520,7 +604,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>more</em> <span class="gp-sep">—</span> mar</span>
           <span class="gp-item"><em>svijetu</em> <span class="gp-sep">—</span> al mundo</span>
           <span class="gp-item"><em>reci</em> <span class="gp-sep">—</span> di / cuenta</span>
-        </div><div class="gp-note"><strong>Sinje</strong> es un epíteto poético para el Adriático — su color azul-grisáceo característico. El mar como mensajero al mundo: tercer elemento natural invocado (ríos → Danubio → mar).</div>
+        </div><div class="gp-note"><strong>Sinje</strong> es un epíteto del croata antiguo para el color azul-grisáceo del mar. <strong>Reci</strong> es el imperativo de <em>reći</em> (decir); <strong>svijetu</strong> es el dativo de <em>svijet</em> (mundo).</div>
       </div>
     </div>
 
@@ -535,7 +619,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>Hrvat</em> <span class="gp-sep">—</span> el croata</span>
           <span class="gp-item"><em>narod</em> <span class="gp-sep">—</span> pueblo</span>
           <span class="gp-item"><em>ljubi</em> <span class="gp-sep">—</span> ama</span>
-        </div><div class="gp-note"><strong>Hrvat</strong> en singular representa a toda la nación — singular colectivo. El mensaje que el Adriático debe transmitir: el croata ama a su pueblo, siempre y en cualquier circunstancia.</div>
+        </div><div class="gp-note"><strong>Hrvat</strong> en singular funciona como colectivo — representa a toda la nación. <strong>Ljubi</strong> es tercera persona singular del presente de <em>ljubiti</em> (amar).</div>
       </div>
     </div>
 
@@ -551,7 +635,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>njive</em> <span class="gp-sep">—</span> campos</span>
           <span class="gp-item"><em>sunce</em> <span class="gp-sep">—</span> el sol</span>
           <span class="gp-item"><em>grije</em> <span class="gp-sep">—</span> calienta</span>
-        </div><div class="gp-note">Comienza una serie de cuatro versos con <strong>Dok</strong> (mientras) — anáfora que construye la idea de amor eterno: mientras exista la tierra, el sol, el viento, la muerte y la vida, el croata amará a su pueblo.</div>
+        </div><div class="gp-note"><strong>Dok</strong> es conjunción temporal (mientras). Los cuatro versos siguientes repiten esta estructura — figura llamada anáfora. <strong>Njive</strong> (campos) está en acusativo plural.</div>
       </div>
     </div>
 
@@ -567,7 +651,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>hrašće</em> <span class="gp-sep">—</span> robledal</span>
           <span class="gp-item"><em>bura</em> <span class="gp-sep">—</span> viento bura</span>
           <span class="gp-item"><em>vije</em> <span class="gp-sep">—</span> azota, agita</span>
-        </div><div class="gp-note"><strong>Hrašće</strong> colectivo de <em>hrast</em> (roble), árbol nacional de Croacia. La <strong>bura</strong> es el viento frío del nordeste, típico de la costa dálmata — símbolo de la dureza y resistencia del carácter croata.</div>
+        </div><div class="gp-note"><strong>Hrašće</strong> es un sustantivo colectivo derivado de <em>hrast</em> (roble). La <strong>bura</strong> es el viento frío del nordeste adriático. <strong>Vije</strong> = tercera persona singular de <em>vijati</em> (azotar, agitar).</div>
       </div>
     </div>
 
@@ -583,7 +667,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>mrtve</em> <span class="gp-sep">—</span> los muertos</span>
           <span class="gp-item"><em>grobak</em> <span class="gp-sep">—</span> la tumba</span>
           <span class="gp-item"><em>krije</em> <span class="gp-sep">—</span> cobija, esconde</span>
-        </div><div class="gp-note"><strong>Grobak</strong> es diminutivo de <em>grob</em> (tumba) — el sufijo -ak da ternura a la imagen de la muerte. La reverencia hacia los antepasados enterrados en la patria como condición de amor.</div>
+        </div><div class="gp-note"><strong>Grobak</strong> es el diminutivo de <em>grob</em> (tumba), formado con el sufijo <em>-ak</em>. <strong>Mrtve</strong> (los muertos) es adjetivo usado como sustantivo, en acusativo plural.</div>
       </div>
     </div>
 
@@ -599,7 +683,7 @@ section[id]{scroll-margin-top:60px}
           <span class="gp-item"><em>živo</em> <span class="gp-sep">—</span> vivo, viviente</span>
           <span class="gp-item"><em>srce</em> <span class="gp-sep">—</span> corazón</span>
           <span class="gp-item"><em>bije</em> <span class="gp-sep">—</span> late, golpea</span>
-        </div><div class="gp-note">Cierre poderoso: el cuarto <em>dok</em> llega a la vida misma. Mientras el corazón lata, el amor a la patria perdura. La anáfora de los cuatro versos construye una promesa eterna: sol → viento → muerte → vida.</div>
+        </div><div class="gp-note"><strong>Živo</strong> (vivo) es adjetivo predicativo que modifica a <strong>srce</strong> (corazón). <strong>Bije</strong> = tercera persona singular de <em>biti</em> (latir, golpear) — distinto de <em>biti</em> (ser).</div>
       </div>
     </div>
   </div>
@@ -643,68 +727,68 @@ section[id]{scroll-margin-top:60px}
 
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('Lijepa','hr-HR')"><span class="pw-original">Lijepa</span><span class="pw-ipa">ljěː.pa</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('naša','hr-HR')"><span class="pw-original">naša</span><span class="pw-ipa">nâ.ʃa</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('domovino','hr-HR')"><span class="pw-original">domovino</span><span class="pw-ipa">do.mǒ.ʋi.no</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('Lijepa','hr-HR')"><span class="pw-original">Lijepa</span><span class="pw-ipa">ljěː.pa</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">hermosa</span></div>
+      <div class="phon-word" onclick="speak('naša','hr-HR')"><span class="pw-original">naša</span><span class="pw-ipa">nâ.ʃa</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">nuestra</span></div>
+      <div class="phon-word" onclick="speak('domovino','hr-HR')"><span class="pw-original">domovino</span><span class="pw-ipa">do.mǒ.ʋi.no</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">patria</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('Oj','hr-HR')"><span class="pw-original">Oj</span><span class="pw-ipa">oj</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('junačka','hr-HR')"><span class="pw-original">junačka</span><span class="pw-ipa">jǔ.naːtʃ.kaː</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('zemljo','hr-HR')"><span class="pw-original">zemljo</span><span class="pw-ipa">zêm.ʎoː</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('mila','hr-HR')"><span class="pw-original">mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('Oj','hr-HR')"><span class="pw-original">Oj</span><span class="pw-ipa">oj</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">¡oh!</span></div>
+      <div class="phon-word" onclick="speak('junačka','hr-HR')"><span class="pw-original">junačka</span><span class="pw-ipa">jǔ.naːtʃ.kaː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">valerosa</span></div>
+      <div class="phon-word" onclick="speak('zemljo','hr-HR')"><span class="pw-original">zemljo</span><span class="pw-ipa">zêm.ʎoː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">tierra</span></div>
+      <div class="phon-word" onclick="speak('mila','hr-HR')"><span class="pw-original">mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">querida</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('Stare','hr-HR')"><span class="pw-original">Stare</span><span class="pw-ipa">stâː.re</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('slave','hr-HR')"><span class="pw-original">slave</span><span class="pw-ipa">slâ.ʋeː</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('djedovino','hr-HR')"><span class="pw-original">djedovino</span><span class="pw-ipa">djê.do.ʋi.no</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('Stare','hr-HR')"><span class="pw-original">Stare</span><span class="pw-ipa">stâː.re</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">antigua</span></div>
+      <div class="phon-word" onclick="speak('slave','hr-HR')"><span class="pw-original">slave</span><span class="pw-ipa">slâ.ʋeː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">de gloria</span></div>
+      <div class="phon-word" onclick="speak('djedovino','hr-HR')"><span class="pw-original">djedovino</span><span class="pw-ipa">djê.do.ʋi.no</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">herencia ancestral</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('da','hr-HR')"><span class="pw-original">da</span><span class="pw-ipa">dâ</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('bi','hr-HR')"><span class="pw-original">bi</span><span class="pw-ipa">bi</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('vazda','hr-HR')"><span class="pw-original">vazda</span><span class="pw-ipa">ʋâz.da</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('sretna','hr-HR')"><span class="pw-original">sretna</span><span class="pw-ipa">srět.na</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('bila','hr-HR')"><span class="pw-original">bila</span><span class="pw-ipa">bǐː.la</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('da','hr-HR')"><span class="pw-original">da</span><span class="pw-ipa">dâ</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">para que</span></div>
+      <div class="phon-word" onclick="speak('bi','hr-HR')"><span class="pw-original">bi</span><span class="pw-ipa">bi</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">(condicional)</span></div>
+      <div class="phon-word" onclick="speak('vazda','hr-HR')"><span class="pw-original">vazda</span><span class="pw-ipa">ʋâz.da</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">siempre</span></div>
+      <div class="phon-word" onclick="speak('sretna','hr-HR')"><span class="pw-original">sretna</span><span class="pw-ipa">srět.na</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">feliz</span></div>
+      <div class="phon-word" onclick="speak('bila','hr-HR')"><span class="pw-original">bila</span><span class="pw-ipa">bǐː.la</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">fueras</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('Mila','hr-HR')"><span class="pw-original">Mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('kano','hr-HR')"><span class="pw-original">kano</span><span class="pw-ipa">kâː.no</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('si','hr-HR')"><span class="pw-original">si</span><span class="pw-ipa">si</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('nam','hr-HR')"><span class="pw-original">nam</span><span class="pw-ipa">nâm</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('slavna','hr-HR')"><span class="pw-original">slavna</span><span class="pw-ipa">slâːʋ.na</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('Mila','hr-HR')"><span class="pw-original">Mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">querida</span></div>
+      <div class="phon-word" onclick="speak('kano','hr-HR')"><span class="pw-original">kano</span><span class="pw-ipa">kâː.no</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">cuán</span></div>
+      <div class="phon-word" onclick="speak('si','hr-HR')"><span class="pw-original">si</span><span class="pw-ipa">si</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">eres</span></div>
+      <div class="phon-word" onclick="speak('nam','hr-HR')"><span class="pw-original">nam</span><span class="pw-ipa">nâm</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">para nosotros</span></div>
+      <div class="phon-word" onclick="speak('slavna','hr-HR')"><span class="pw-original">slavna</span><span class="pw-ipa">slâːʋ.na</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">gloriosa</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('Mila','hr-HR')"><span class="pw-original">Mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('si','hr-HR')"><span class="pw-original">si</span><span class="pw-ipa">si</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('nam','hr-HR')"><span class="pw-original">nam</span><span class="pw-ipa">nâm</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('ti','hr-HR')"><span class="pw-original">ti</span><span class="pw-ipa">tî</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('jedina','hr-HR')"><span class="pw-original">jedina</span><span class="pw-ipa">jě.diː.naː</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('Mila','hr-HR')"><span class="pw-original">Mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">querida</span></div>
+      <div class="phon-word" onclick="speak('si','hr-HR')"><span class="pw-original">si</span><span class="pw-ipa">si</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">eres</span></div>
+      <div class="phon-word" onclick="speak('nam','hr-HR')"><span class="pw-original">nam</span><span class="pw-ipa">nâm</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">para nosotros</span></div>
+      <div class="phon-word" onclick="speak('ti','hr-HR')"><span class="pw-original">ti</span><span class="pw-ipa">tî</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">tú</span></div>
+      <div class="phon-word" onclick="speak('jedina','hr-HR')"><span class="pw-original">jedina</span><span class="pw-ipa">jě.diː.naː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">única</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('Mila','hr-HR')"><span class="pw-original">Mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('kuda','hr-HR')"><span class="pw-original">kuda</span><span class="pw-ipa">kǔ.daː</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('si','hr-HR')"><span class="pw-original">si</span><span class="pw-ipa">si</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('nam','hr-HR')"><span class="pw-original">nam</span><span class="pw-ipa">nâm</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('ravna','hr-HR')"><span class="pw-original">ravna</span><span class="pw-ipa">rǎːʋ.na</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('Mila','hr-HR')"><span class="pw-original">Mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">querida</span></div>
+      <div class="phon-word" onclick="speak('kuda','hr-HR')"><span class="pw-original">kuda</span><span class="pw-ipa">kǔ.daː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">cuán</span></div>
+      <div class="phon-word" onclick="speak('si','hr-HR')"><span class="pw-original">si</span><span class="pw-ipa">si</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">eres</span></div>
+      <div class="phon-word" onclick="speak('nam','hr-HR')"><span class="pw-original">nam</span><span class="pw-ipa">nâm</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">para nosotros</span></div>
+      <div class="phon-word" onclick="speak('ravna','hr-HR')"><span class="pw-original">ravna</span><span class="pw-ipa">rǎːʋ.na</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">llana</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('Mila','hr-HR')"><span class="pw-original">Mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('kuda','hr-HR')"><span class="pw-original">kuda</span><span class="pw-ipa">kǔ.daː</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('si','hr-HR')"><span class="pw-original">si</span><span class="pw-ipa">si</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('planina','hr-HR')"><span class="pw-original">planina</span><span class="pw-ipa">pla.nǐ.na</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('Mila','hr-HR')"><span class="pw-original">Mila</span><span class="pw-ipa">mǐ.la</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">querida</span></div>
+      <div class="phon-word" onclick="speak('kuda','hr-HR')"><span class="pw-original">kuda</span><span class="pw-ipa">kǔ.daː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">cuán</span></div>
+      <div class="phon-word" onclick="speak('si','hr-HR')"><span class="pw-original">si</span><span class="pw-ipa">si</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">eres</span></div>
+      <div class="phon-word" onclick="speak('planina','hr-HR')"><span class="pw-original">planina</span><span class="pw-ipa">pla.nǐ.na</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">montaña</span></div>
     </div>
   </div>
 
@@ -712,72 +796,72 @@ section[id]{scroll-margin-top:60px}
 
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('Teci','hr-HR')"><span class="pw-original">Teci</span><span class="pw-ipa">tě.tsi</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('Dravo','hr-HR')"><span class="pw-original">Dravo</span><span class="pw-ipa">drâː.ʋo</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('Savo','hr-HR')"><span class="pw-original">Savo</span><span class="pw-ipa">sâː.ʋo</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('teci','hr-HR')"><span class="pw-original">teci</span><span class="pw-ipa">tě.tsi</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('Teci','hr-HR')"><span class="pw-original">Teci</span><span class="pw-ipa">tě.tsi</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">fluye</span></div>
+      <div class="phon-word" onclick="speak('Dravo','hr-HR')"><span class="pw-original">Dravo</span><span class="pw-ipa">drâː.ʋo</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">Drava (río)</span></div>
+      <div class="phon-word" onclick="speak('Savo','hr-HR')"><span class="pw-original">Savo</span><span class="pw-ipa">sâː.ʋo</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">Sava (río)</span></div>
+      <div class="phon-word" onclick="speak('teci','hr-HR')"><span class="pw-original">teci</span><span class="pw-ipa">tě.tsi</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">fluye</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('niti','hr-HR')"><span class="pw-original">Nit'</span><span class="pw-ipa">nit</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('ti','hr-HR')"><span class="pw-original">ti</span><span class="pw-ipa">tî</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('Dunav','hr-HR')"><span class="pw-original">Dunav</span><span class="pw-ipa">dǔ.naʋ</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('silu','hr-HR')"><span class="pw-original">silu</span><span class="pw-ipa">sî.lu</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('gubi','hr-HR')"><span class="pw-original">gubi</span><span class="pw-ipa">gǔ.biː</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('niti','hr-HR')"><span class="pw-original">Nit'</span><span class="pw-ipa">nit</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">ni / tampoco</span></div>
+      <div class="phon-word" onclick="speak('ti','hr-HR')"><span class="pw-original">ti</span><span class="pw-ipa">tî</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">tú</span></div>
+      <div class="phon-word" onclick="speak('Dunav','hr-HR')"><span class="pw-original">Dunav</span><span class="pw-ipa">dǔ.naʋ</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">Danubio</span></div>
+      <div class="phon-word" onclick="speak('silu','hr-HR')"><span class="pw-original">silu</span><span class="pw-ipa">sî.lu</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">la fuerza</span></div>
+      <div class="phon-word" onclick="speak('gubi','hr-HR')"><span class="pw-original">gubi</span><span class="pw-ipa">gǔ.biː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">pierdas</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('sinje','hr-HR')"><span class="pw-original">Sinje</span><span class="pw-ipa">sîː.ɲeː</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('more','hr-HR')"><span class="pw-original">more</span><span class="pw-ipa">môː.re</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('svijetu','hr-HR')"><span class="pw-original">svijetu</span><span class="pw-ipa">sʋjěː.tu</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('reci','hr-HR')"><span class="pw-original">reci</span><span class="pw-ipa">rê.tsi</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('sinje','hr-HR')"><span class="pw-original">Sinje</span><span class="pw-ipa">sîː.ɲeː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">azul marino</span></div>
+      <div class="phon-word" onclick="speak('more','hr-HR')"><span class="pw-original">more</span><span class="pw-ipa">môː.re</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">mar</span></div>
+      <div class="phon-word" onclick="speak('svijetu','hr-HR')"><span class="pw-original">svijetu</span><span class="pw-ipa">sʋjěː.tu</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">al mundo</span></div>
+      <div class="phon-word" onclick="speak('reci','hr-HR')"><span class="pw-original">reci</span><span class="pw-ipa">rê.tsi</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">di</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('da','hr-HR')"><span class="pw-original">da</span><span class="pw-ipa">da</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('svoj','hr-HR')"><span class="pw-original">svoj</span><span class="pw-ipa">sʋôːj</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('narod','hr-HR')"><span class="pw-original">narod</span><span class="pw-ipa">nǎː.rod</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('Hrvat','hr-HR')"><span class="pw-original">Hrvat</span><span class="pw-ipa">xř̩.ʋaːt</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('ljubi','hr-HR')"><span class="pw-original">ljubi</span><span class="pw-ipa">ʎûː.biː</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('da','hr-HR')"><span class="pw-original">da</span><span class="pw-ipa">da</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">para que</span></div>
+      <div class="phon-word" onclick="speak('svoj','hr-HR')"><span class="pw-original">svoj</span><span class="pw-ipa">sʋôːj</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">su (propio)</span></div>
+      <div class="phon-word" onclick="speak('narod','hr-HR')"><span class="pw-original">narod</span><span class="pw-ipa">nǎː.rod</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">pueblo</span></div>
+      <div class="phon-word" onclick="speak('Hrvat','hr-HR')"><span class="pw-original">Hrvat</span><span class="pw-ipa">xř̩.ʋaːt</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">el croata</span></div>
+      <div class="phon-word" onclick="speak('ljubi','hr-HR')"><span class="pw-original">ljubi</span><span class="pw-ipa">ʎûː.biː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">ama</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('dok','hr-HR')"><span class="pw-original">Dok</span><span class="pw-ipa">dôk</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('mu','hr-HR')"><span class="pw-original">mu</span><span class="pw-ipa">mu</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('njive','hr-HR')"><span class="pw-original">njive</span><span class="pw-ipa">ɲî.ʋe</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('sunce','hr-HR')"><span class="pw-original">sunce</span><span class="pw-ipa">sûːn.tse</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('grije','hr-HR')"><span class="pw-original">grije</span><span class="pw-ipa">grî.jeː</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('dok','hr-HR')"><span class="pw-original">Dok</span><span class="pw-ipa">dôk</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">mientras</span></div>
+      <div class="phon-word" onclick="speak('mu','hr-HR')"><span class="pw-original">mu</span><span class="pw-ipa">mu</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">le / suyo</span></div>
+      <div class="phon-word" onclick="speak('njive','hr-HR')"><span class="pw-original">njive</span><span class="pw-ipa">ɲî.ʋe</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">campos</span></div>
+      <div class="phon-word" onclick="speak('sunce','hr-HR')"><span class="pw-original">sunce</span><span class="pw-ipa">sûːn.tse</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">sol</span></div>
+      <div class="phon-word" onclick="speak('grije','hr-HR')"><span class="pw-original">grije</span><span class="pw-ipa">grî.jeː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">calienta</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('dok','hr-HR')"><span class="pw-original">Dok</span><span class="pw-ipa">dôk</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('mu','hr-HR')"><span class="pw-original">mu</span><span class="pw-ipa">mu</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('hrašće','hr-HR')"><span class="pw-original">hrašće</span><span class="pw-ipa">xr̩âʃ.tɕe</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('bura','hr-HR')"><span class="pw-original">bura</span><span class="pw-ipa">bû.ra</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('vije','hr-HR')"><span class="pw-original">vije</span><span class="pw-ipa">ʋî.jeː</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('dok','hr-HR')"><span class="pw-original">Dok</span><span class="pw-ipa">dôk</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">mientras</span></div>
+      <div class="phon-word" onclick="speak('mu','hr-HR')"><span class="pw-original">mu</span><span class="pw-ipa">mu</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">le / suyo</span></div>
+      <div class="phon-word" onclick="speak('hrašće','hr-HR')"><span class="pw-original">hrašće</span><span class="pw-ipa">xr̩âʃ.tɕe</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">robledal</span></div>
+      <div class="phon-word" onclick="speak('bura','hr-HR')"><span class="pw-original">bura</span><span class="pw-ipa">bû.ra</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">viento bura</span></div>
+      <div class="phon-word" onclick="speak('vije','hr-HR')"><span class="pw-original">vije</span><span class="pw-ipa">ʋî.jeː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">azota</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('dok','hr-HR')"><span class="pw-original">Dok</span><span class="pw-ipa">dôk</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('mu','hr-HR')"><span class="pw-original">mu</span><span class="pw-ipa">mu</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('mrtve','hr-HR')"><span class="pw-original">mrtve</span><span class="pw-ipa">mř̩t.ʋe</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('grobak','hr-HR')"><span class="pw-original">grobak</span><span class="pw-ipa">grô.bak</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('krije','hr-HR')"><span class="pw-original">krije</span><span class="pw-ipa">krî.jeː</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('dok','hr-HR')"><span class="pw-original">Dok</span><span class="pw-ipa">dôk</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">mientras</span></div>
+      <div class="phon-word" onclick="speak('mu','hr-HR')"><span class="pw-original">mu</span><span class="pw-ipa">mu</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">le / suyo</span></div>
+      <div class="phon-word" onclick="speak('mrtve','hr-HR')"><span class="pw-original">mrtve</span><span class="pw-ipa">mř̩t.ʋe</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">los muertos</span></div>
+      <div class="phon-word" onclick="speak('grobak','hr-HR')"><span class="pw-original">grobak</span><span class="pw-ipa">grô.bak</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">tumba</span></div>
+      <div class="phon-word" onclick="speak('krije','hr-HR')"><span class="pw-original">krije</span><span class="pw-ipa">krî.jeː</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">cobija</span></div>
     </div>
   </div>
   <div class="phon-verse">
     <div class="phon-word-row">
-      <div class="phon-word" onclick="speak('dok','hr-HR')"><span class="pw-original">Dok</span><span class="pw-ipa">dôk</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('mu','hr-HR')"><span class="pw-original">mu</span><span class="pw-ipa">mu</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('živo','hr-HR',0.65)"><span class="pw-original">živo</span><span class="pw-ipa">ʒǐː.ʋo</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('srce','hr-HR')"><span class="pw-original">srce</span><span class="pw-ipa">sr̩̂.tse</span><span class="pw-clic">▶ escuchar</span></div>
-      <div class="phon-word" onclick="speak('bije','hr-HR')"><span class="pw-original">bije</span><span class="pw-ipa">bǐ.je</span><span class="pw-clic">▶ escuchar</span></div>
+      <div class="phon-word" onclick="speak('dok','hr-HR')"><span class="pw-original">Dok</span><span class="pw-ipa">dôk</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">mientras</span></div>
+      <div class="phon-word" onclick="speak('mu','hr-HR')"><span class="pw-original">mu</span><span class="pw-ipa">mu</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">le / suyo</span></div>
+      <div class="phon-word" onclick="speak('živo','hr-HR',0.65)"><span class="pw-original">živo</span><span class="pw-ipa">ʒǐː.ʋo</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">vivo</span></div>
+      <div class="phon-word" onclick="speak('srce','hr-HR')"><span class="pw-original">srce</span><span class="pw-ipa">sr̩̂.tse</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">corazón</span></div>
+      <div class="phon-word" onclick="speak('bije','hr-HR')"><span class="pw-original">bije</span><span class="pw-ipa">bǐ.je</span><span class="pw-clic">▶ escuchar</span><span class="pw-meaning">late</span></div>
     </div>
   </div>
 
@@ -798,56 +882,100 @@ section[id]{scroll-margin-top:60px}
     <div class="section-divider" style="background:var(--gold)"></div>
   </div>
 
-  <!-- OPCIÓN A: Karaoke con timestamps -->
-  <div id="karaoke-view">
-    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.25rem">Karaoke — letra sincronizada</p>
-
-    <div class="audio-wrap" style="margin-bottom:1.5rem">
-      <audio id="hymnAudio" controls style="width:100%">
-        <source src="Lijepa_nasa_domovino_instrumental.ogg" type="audio/ogg">
-      </audio>
-      <p class="audio-credit">U.S. Navy Band · Dominio público · Wikimedia Commons</p>
-    </div>
-
-    <div id="karaoke-lines">
-      <div class="kr-line" data-start="1.0"  data-end="6.5" ><span class="kr-text">Lijepa naša domovino,</span><span class="kr-tr">Nuestra hermosa patria,</span></div>
-      <div class="kr-line" data-start="7.5"  data-end="13.5"><span class="kr-text">Oj, junačka zemljo mila,</span><span class="kr-tr">Oh, valerosa tierra querida,</span></div>
-      <div class="kr-line" data-start="14.0" data-end="20.5"><span class="kr-text">Stare slave djedovino,</span><span class="kr-tr">Herencia de antigua gloria ancestral,</span></div>
-      <div class="kr-line" data-start="21.0" data-end="27.0"><span class="kr-text">Da bi vazda sretna bila!</span><span class="kr-tr">¡Para que siempre seas feliz!</span></div>
-      <div class="kr-line" data-start="30.5" data-end="37.0"><span class="kr-text">Mila, kano si nam slavna,</span><span class="kr-tr">Querida, cuán gloriosa eres para nosotros,</span></div>
-      <div class="kr-line" data-start="37.5" data-end="43.5"><span class="kr-text">Mila, si nam ti jedina,</span><span class="kr-tr">Querida, eres tú nuestra única,</span></div>
-      <div class="kr-line" data-start="43.5" data-end="49.0"><span class="kr-text">Mila, kuda si nam ravna,</span><span class="kr-tr">Querida, cuán llana eres para nosotros,</span></div>
-      <div class="kr-line" data-start="50.0" data-end="57.5"><span class="kr-text">Mila, kuda si planina!</span><span class="kr-tr">¡Querida, cuán montañosa eres!</span></div>
-    </div>
-
-    <p style="font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.25);margin-top:1.5rem;letter-spacing:.05em">Si la sincronización no coincide exactamente, usa los controles del audio para ajustar.</p>
+  <!-- Audio -->
+  <div class="cantar-audio-wrap">
+    <p class="cantar-audio-label">Interpretación — U.S. Navy Band</p>
+    <audio id="hymnAudio" controls style="width:100%">
+      <source src="Lijepa_nasa_domovino_instrumental_cijeli.ogg" type="audio/ogg">
+    </audio>
+    <p class="audio-credit">Dominio público · Wikimedia Commons · Ambas estrofas (1 min 57 s)</p>
   </div>
 
-  <!-- Teleprompter (mantener como alternativa) -->
-  <div style="margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)">
-    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.25rem">Teleprompter — avance manual</p>
+  <!-- Letra -->
+  <div class="cantar-letra">
 
-    <div class="tp-container" id="tpContainer">
-      <div class="tp-line past" id="tp-past2"></div>
-      <div class="tp-line past" id="tp-past1"></div>
-      <div class="tp-line current" id="tp-current">Lijepa naša domovino,</div>
-      <div class="tp-translation" id="tp-tr">Nuestra hermosa patria,</div>
-      <div class="tp-line next1" id="tp-next1">Oj, junačka zemljo mila,</div>
-      <div class="tp-line next2" id="tp-next2">Stare slave djedovino,</div>
+    <div class="cantar-estrofa">
+      <p class="cantar-estrofa-label">Estrofa I</p>
+      <div class="cantar-versos">
+        <div class="cantar-verso">
+          <span class="cv-hr">Lijepa naša domovino,</span>
+          <span class="cv-es">Nuestra hermosa patria,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Oj, junačka zemljo mila,</span>
+          <span class="cv-es">Oh, valerosa tierra querida,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Stare slave djedovino,</span>
+          <span class="cv-es">Herencia de antigua gloria ancestral,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Da bi vazda sretna bila!</span>
+          <span class="cv-es">¡Para que siempre seas feliz!</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Mila, kano si nam slavna,</span>
+          <span class="cv-es">Querida, cuán gloriosa eres para nosotros,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Mila, si nam ti jedina,</span>
+          <span class="cv-es">Querida, eres tú nuestra única,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Mila, kuda si nam ravna,</span>
+          <span class="cv-es">Querida, cuán llana eres para nosotros,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Mila, kuda si planina!</span>
+          <span class="cv-es">¡Querida, cuán montañosa eres!</span>
+        </div>
+      </div>
     </div>
 
-    <div class="tp-controls">
-      <button class="tp-btn" onclick="tpPrev()">◀ Verso anterior</button>
-      <button class="tp-btn" onclick="tpReset()">↺ Reiniciar</button>
-      <button class="tp-btn primary" onclick="tpNext()">Verso siguiente ▶</button>
+    <div class="cantar-estrofa">
+      <p class="cantar-estrofa-label">Estrofa II</p>
+      <div class="cantar-versos">
+        <div class="cantar-verso">
+          <span class="cv-hr">Teci, Dravo, Savo, teci,</span>
+          <span class="cv-es">Fluye, Drava, Sava, fluye,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Nit' ti, Dunav, silu gubi,</span>
+          <span class="cv-es">Ni tú, Danubio, pierdas tu fuerza,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Sinje more, svijetu reci</span>
+          <span class="cv-es">Mar azul (Adriático), di al mundo</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Da svoj narod Hrvat ljubi</span>
+          <span class="cv-es">Que el croata ama a su pueblo</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Dok mu njive sunce grije,</span>
+          <span class="cv-es">Mientras el sol calienta sus campos,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Dok mu hrašće bura vije,</span>
+          <span class="cv-es">Mientras la bura azota sus robledales,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Dok mu mrtve grobak krije,</span>
+          <span class="cv-es">Mientras la tumba cobija a sus muertos,</span>
+        </div>
+        <div class="cantar-verso">
+          <span class="cv-hr">Dok mu živo srce bije!</span>
+          <span class="cv-es">¡Mientras su corazón vivo late!</span>
+        </div>
+      </div>
     </div>
-    <p style="font-family:'Space Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.25);text-align:center;margin-top:.75rem;letter-spacing:.05em">Avanza manualmente mientras escuchas el audio</p>
+
   </div>
 
-  <!-- YouTube videos -->
+  <!-- YouTube -->
   <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)">
-    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Videos para cantar — abren en YouTube</p>
-    <div style="display:flex;flex-direction:column;gap:.6rem;margin-bottom:2.5rem">
+    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:1rem">Más versiones para cantar</p>
+    <div style="display:flex;flex-direction:column;gap:.6rem">
       <a class="yt-link" href="https://www.youtube.com/watch?v=3KZSAvGjuaQ" target="_blank" rel="noopener">▶ Versión oficial con letra — subtítulos en croata</a>
       <a class="yt-link" href="https://www.youtube.com/watch?v=EwzpVsloMKU" target="_blank" rel="noopener">▶ Interpretación orquestal — ambas estrofas</a>
       <a class="yt-link" href="https://www.youtube.com/watch?v=1lvHpkndatM" target="_blank" rel="noopener">▶ Versión con letra en croata e inglés</a>
@@ -855,41 +983,9 @@ section[id]{scroll-margin-top:60px}
     </div>
   </div>
 
-  <!-- Reference panels -->
-  <div style="margin-top:2.5rem;padding-top:2rem;border-top:1px solid rgba(255,255,255,.08)">
-    <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:.08em;margin-bottom:.75rem;text-transform:uppercase">Vista de referencia</p>
-    <div class="ref-tabs">
-      <button class="ref-tab active" id="tab-est1" onclick="showEst(1,this)">Estrofa I</button>
-      <button class="ref-tab" id="tab-est2" onclick="showEst(2,this)">Estrofa II</button>
-    </div>
-  </div>
-  <div class="ref-panel active" id="ref-est1">
-    <div class="ref-row"><div class="ref-cell ref-head">Croata</div><div class="ref-cell ref-head">IPA</div><div class="ref-cell ref-head">Español</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Lijepa naša domovino,</div><div class="ref-cell ipa">[ljěː.pa nâ.ʃa do.mǒ.ʋi.no]</div><div class="ref-cell es">Nuestra hermosa patria,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Oj, junačka zemljo mila,</div><div class="ref-cell ipa">[oj jǔ.naːtʃ.kaː zêm.ʎoː mǐ.la]</div><div class="ref-cell es">Oh, valerosa tierra querida,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Stare slave djedovino,</div><div class="ref-cell ipa">[stâː.re slâ.ʋeː djê.do.ʋi.no]</div><div class="ref-cell es">Herencia de antigua gloria ancestral,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Da bi vazda sretna bila!</div><div class="ref-cell ipa">[dâ bi ʋâz.da srět.na bǐː.la]</div><div class="ref-cell es">¡Para que siempre seas feliz!</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Mila, kano si nam slavna,</div><div class="ref-cell ipa">[mǐ.la kâː.no si nâm slâːʋ.na]</div><div class="ref-cell es">Querida, cuán gloriosa eres,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Mila, si nam ti jedina,</div><div class="ref-cell ipa">[mǐ.la si nâm tî jě.diː.naː]</div><div class="ref-cell es">Querida, eres nuestra única,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Mila, kuda si nam ravna,</div><div class="ref-cell ipa">[mǐ.la kǔ.daː si nâm rǎːʋ.na]</div><div class="ref-cell es">Querida, cuán llana eres,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Mila, kuda si planina!</div><div class="ref-cell ipa">[mǐ.la kǔ.daː si pla.nǐ.na]</div><div class="ref-cell es">¡Querida, cuán montañosa eres!</div></div>
-  </div>
-  <div class="ref-panel" id="ref-est2">
-    <div class="ref-row"><div class="ref-cell ref-head">Croata</div><div class="ref-cell ref-head">IPA</div><div class="ref-cell ref-head">Español</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Teci, Dravo, Savo, teci,</div><div class="ref-cell ipa">[tě.tsi drâː.ʋo sâː.ʋo tě.tsi]</div><div class="ref-cell es">Fluye, Drava, Sava, fluye,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Nit' ti, Dunav, silu gubi,</div><div class="ref-cell ipa">[nit tî dǔ.naʋ sî.lu gǔ.biː]</div><div class="ref-cell es">Ni tú, Danubio, pierdas tu fuerza,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Sinje more, svijetu reci</div><div class="ref-cell ipa">[sîː.ɲeː môː.re sʋjěː.tu rê.tsi]</div><div class="ref-cell es">Mar azul, di al mundo</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Da svoj narod Hrvat ljubi</div><div class="ref-cell ipa">[da sʋôːj nǎː.rod xř̩.ʋaːt ʎûː.biː]</div><div class="ref-cell es">Que el croata ama a su pueblo</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Dok mu njive sunce grije,</div><div class="ref-cell ipa">[dôk mu ɲî.ʋe sûːn.tse grî.jeː]</div><div class="ref-cell es">Mientras el sol calienta sus campos,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Dok mu hrašće bura vije,</div><div class="ref-cell ipa">[dôk mu xr̩âʃ.tɕe bû.ra ʋî.jeː]</div><div class="ref-cell es">Mientras la bura azota sus robledales,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Dok mu mrtve grobak krije,</div><div class="ref-cell ipa">[dôk mu mř̩t.ʋe grô.bak krî.jeː]</div><div class="ref-cell es">Mientras la tumba cobija a sus muertos,</div></div>
-    <div class="ref-row"><div class="ref-cell hr">Dok mu živo srce bije!</div><div class="ref-cell ipa">[dôk mu ʒǐː.ʋo sr̩̂.tse bǐ.je]</div><div class="ref-cell es">¡Mientras su corazón vivo late!</div></div>
-  </div>
-
   <button class="back-top-btn-dark" onclick="scrollToTop()">↑ Volver al inicio</button>
 </section>
 </div>
-
 
 <!-- PRACTICAR -->
 <div id="practicar-wrap">
@@ -900,213 +996,119 @@ section[id]{scroll-margin-top:60px}
     <div class="section-divider"></div>
   </div>
 
-  <!-- Mode tabs -->
+  <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem">Elige un modo</p>
   <div class="prac-tabs">
-    <button class="prac-tab active" onclick="setPracMode('versos',this)">Versos</button>
-    <button class="prac-tab" onclick="setPracMode('vocab',this)">Vocabulario</button>
+    <button class="prac-tab" onclick="setPracMode('versos',this)">🎯 Versos — ejercicios interactivos</button>
+    <button class="prac-tab active" onclick="setPracMode('vocab',this)">📖 Vocabulario — palabras del himno</button>
   </div>
 
-  <!-- MODE 1: Verse flashcards -->
-  <div id="prac-versos">
-    <p class="prac-desc">Se muestra la traducción al español. Recuerda el verso en croata, luego da vuelta la tarjeta.</p>
-    <div class="fc-card" id="fc-card" onclick="fcFlip()">
-      <div class="fc-inner" id="fc-inner">
-        <div class="fc-front">
-          <span class="fc-label">¿Cómo se dice en croata?</span>
-          <div class="fc-text" id="fc-front-text"></div>
-          <span class="fc-hint">Toca para ver</span>
-        </div>
-        <div class="fc-back">
-          <span class="fc-label">Verso en croata</span>
-          <div class="fc-text" id="fc-back-text"></div>
-          <div class="fc-ipa" id="fc-ipa-text"></div>
-        </div>
+  <!-- MODE 1: Drag & drop + matching -->
+  <div id="prac-versos" style="display:none">
+
+    <!-- Sub-tabs -->
+    <div class="prac-subtabs">
+      <button class="prac-subtab active" onclick="setVersoMode('drag',this)">Ordenar versos</button>
+      <button class="prac-subtab" onclick="setVersoMode('match',this)">Escucha y elige</button>
+    </div>
+
+    <!-- DRAG & DROP -->
+    <div id="modo-drag">
+      <p class="prac-desc">Arrastra los versos para reconstruir el himno en orden. Los versos correctos se marcan en verde.</p>
+
+      <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Estrofa I</p>
+      <div style="display:flex;gap:.5rem;margin-bottom:.75rem;align-items:center;flex-wrap:wrap">
+        <button class="fc-btn primary" onclick="dragCheck(1)">Verificar</button>
+        <button class="fc-btn" onclick="dragReset(1)">↺ Reiniciar</button>
+        <span id="drag-score-1" style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--ink-faint)"></span>
       </div>
+      <div id="drag-list-1" style="margin-bottom:2rem"></div>
+
+      <p style="font-family:'Space Mono',monospace;font-size:.65rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.6rem">Estrofa II</p>
+      <div style="display:flex;gap:.5rem;margin-bottom:.75rem;align-items:center;flex-wrap:wrap">
+        <button class="fc-btn primary" onclick="dragCheck(2)">Verificar</button>
+        <button class="fc-btn" onclick="dragReset(2)">↺ Reiniciar</button>
+        <span id="drag-score-2" style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--ink-faint)"></span>
+      </div>
+      <div id="drag-list-2"></div>
     </div>
-    <div class="fc-controls">
-      <button class="fc-btn" onclick="fcPrev()">◀ Anterior</button>
-      <span class="fc-counter" id="fc-counter">1 / 16</span>
-      <button class="fc-btn primary" onclick="fcNext()">Siguiente ▶</button>
+
+    <!-- ESCUCHA Y ELIGE -->
+    <div id="modo-match" style="display:none">
+      <p class="prac-desc">Presiona reproducir para escuchar un verso. Luego elige cuál de las opciones corresponde.</p>
+      <div style="display:flex;gap:.5rem;margin-bottom:1.5rem;align-items:center;flex-wrap:wrap">
+        <button class="fc-btn primary" id="listen-play-btn" onclick="listenPlay()">▶ Reproducir verso</button>
+        <button class="fc-btn" onclick="listenNext()">Siguiente ▶</button>
+        <button class="fc-btn" onclick="listenReset()">↺ Reiniciar</button>
+        <span id="listen-score" style="font-family:'Space Mono',monospace;font-size:.7rem;color:var(--ink-faint)"></span>
+      </div>
+      <div id="listen-options" style="display:flex;flex-direction:column;gap:.6rem"></div>
+      <div id="listen-result" style="margin-top:1rem;font-family:'Space Mono',monospace;font-size:.75rem;min-height:1.5rem"></div>
     </div>
-    <div class="fc-progress">
-      <div class="fc-bar" id="fc-bar"></div>
-    </div>
-    <button class="fc-btn" onclick="fcShuffle()" style="margin:1rem auto;display:block;font-size:.65rem">↺ Mezclar tarjetas</button>
+
   </div>
 
-  <!-- MODE 2: Vocabulary by category -->
-  <div id="prac-vocab" style="display:none">
+  <!-- MODE 2: Vocabulary -->
+  <div id="prac-vocab">
     <p class="prac-desc">Palabras del himno agrupadas por categoría. Toca cada tarjeta para ver su significado.</p>
 
     <div class="vocab-cat">
       <h3 class="vocab-cat-title">Sustantivos</h3>
       <div class="vocab-grid">
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>domovina</em></div>
-          <div class="vc-back"><strong>patria</strong><span>sust. fem. · vocativo: domovino</span><span class="vc-ex">«Lijepa naša <u>domovino</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>zemlja</em></div>
-          <div class="vc-back"><strong>tierra</strong><span>sust. fem. · vocativo: zemljo</span><span class="vc-ex">«junačka <u>zemljo</u> mila»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>slava</em></div>
-          <div class="vc-back"><strong>gloria</strong><span>sust. fem. · genitivo: slave</span><span class="vc-ex">«stare <u>slave</u> djedovino»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>djedovina</em></div>
-          <div class="vc-back"><strong>herencia ancestral</strong><span>sust. fem. · de djed (abuelo)</span><span class="vc-ex">«stare slave <u>djedovino</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>planina</em></div>
-          <div class="vc-back"><strong>montaña</strong><span>sust. fem.</span><span class="vc-ex">«kuda si <u>planina</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>more</em></div>
-          <div class="vc-back"><strong>mar</strong><span>sust. neutro · epíteto: sinje (azul marino)</span><span class="vc-ex">«sinje <u>more</u>, svijetu reci»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>narod</em></div>
-          <div class="vc-back"><strong>pueblo, nación</strong><span>sust. masc.</span><span class="vc-ex">«da svoj <u>narod</u> Hrvat ljubi»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>srce</em></div>
-          <div class="vc-back"><strong>corazón</strong><span>sust. neutro</span><span class="vc-ex">«dok mu živo <u>srce</u> bije»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>sunce</em></div>
-          <div class="vc-back"><strong>sol</strong><span>sust. neutro</span><span class="vc-ex">«dok mu njive <u>sunce</u> grije»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>bura</em></div>
-          <div class="vc-back"><strong>bura</strong><span>sust. fem. · viento frío del nordeste, típico del Adriático</span><span class="vc-ex">«dok mu hrašće <u>bura</u> vije»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>grobak</em></div>
-          <div class="vc-back"><strong>tumba</strong><span>sust. masc. · diminutivo de grob</span><span class="vc-ex">«dok mu mrtve <u>grobak</u> krije»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>sila</em></div>
-          <div class="vc-back"><strong>fuerza, potencia</strong><span>sust. fem. · acusativo: silu</span><span class="vc-ex">«nit' ti, Dunav, <u>silu</u> gubi»</span></div>
-        </div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>domovina</em></div><div class="vc-back"><strong>patria</strong><span>sust. fem. · vocativo: domovino</span><span class="vc-ex">«Lijepa naša <u>domovino</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>zemlja</em></div><div class="vc-back"><strong>tierra</strong><span>sust. fem. · vocativo: zemljo</span><span class="vc-ex">«junačka <u>zemljo</u> mila»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>slava</em></div><div class="vc-back"><strong>gloria</strong><span>sust. fem. · genitivo: slave</span><span class="vc-ex">«stare <u>slave</u> djedovino»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>djedovina</em></div><div class="vc-back"><strong>herencia ancestral</strong><span>sust. fem. · de djed (abuelo)</span><span class="vc-ex">«stare slave <u>djedovino</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>planina</em></div><div class="vc-back"><strong>montaña</strong><span>sust. fem.</span><span class="vc-ex">«kuda si <u>planina</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>more</em></div><div class="vc-back"><strong>mar</strong><span>sust. neutro · epíteto: sinje</span><span class="vc-ex">«sinje <u>more</u>, svijetu reci»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>narod</em></div><div class="vc-back"><strong>pueblo, nación</strong><span>sust. masc.</span><span class="vc-ex">«da svoj <u>narod</u> Hrvat ljubi»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>srce</em></div><div class="vc-back"><strong>corazón</strong><span>sust. neutro</span><span class="vc-ex">«dok mu živo <u>srce</u> bije»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>sunce</em></div><div class="vc-back"><strong>sol</strong><span>sust. neutro</span><span class="vc-ex">«dok mu njive <u>sunce</u> grije»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>bura</em></div><div class="vc-back"><strong>bura</strong><span>sust. fem. · viento frío del nordeste adriático</span><span class="vc-ex">«dok mu hrašće <u>bura</u> vije»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>grobak</em></div><div class="vc-back"><strong>tumba</strong><span>sust. masc. · diminutivo de grob</span><span class="vc-ex">«dok mu mrtve <u>grobak</u> krije»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>sila</em></div><div class="vc-back"><strong>fuerza, potencia</strong><span>sust. fem. · acusativo: silu</span><span class="vc-ex">«nit' ti, Dunav, <u>silu</u> gubi»</span></div></div>
       </div>
     </div>
 
     <div class="vocab-cat">
       <h3 class="vocab-cat-title">Adjetivos</h3>
       <div class="vocab-grid">
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>lijep / lijepa</em></div>
-          <div class="vc-back"><strong>hermoso/a</strong><span>adj. · contiene <em>ije</em>, reflejo del fonema eslavo jat</span><span class="vc-ex">«<u>lijepa</u> naša domovino»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>mil / mila</em></div>
-          <div class="vc-back"><strong>querido/a, amado/a</strong><span>adj. · aparece 7 veces en el himno</span><span class="vc-ex">«<u>mila</u>, kano si nam slavna»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>junački / junačka</em></div>
-          <div class="vc-back"><strong>valeroso/a, heroico/a</strong><span>adj. · de junak (héroe)</span><span class="vc-ex">«oj, <u>junačka</u> zemljo mila»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>star / stara</em></div>
-          <div class="vc-back"><strong>antiguo/a, viejo/a</strong><span>adj. · genitivo: stare</span><span class="vc-ex">«<u>stare</u> slave djedovino»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>sretan / sretna</em></div>
-          <div class="vc-back"><strong>feliz, dichoso/a</strong><span>adj.</span><span class="vc-ex">«da bi vazda <u>sretna</u> bila»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>slavan / slavna</em></div>
-          <div class="vc-back"><strong>glorioso/a, célebre</strong><span>adj. · de slava (gloria)</span><span class="vc-ex">«kano si nam <u>slavna</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>ravan / ravna</em></div>
-          <div class="vc-back"><strong>llano/a, plano/a</strong><span>adj. · alude a las llanuras de Eslavonia</span><span class="vc-ex">«kuda si nam <u>ravna</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>sinje</em></div>
-          <div class="vc-back"><strong>azul marino, grisáceo</strong><span>adj. · epíteto poético del mar Adriático</span><span class="vc-ex">«<u>sinje</u> more, svijetu reci»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>živ / živo</em></div>
-          <div class="vc-back"><strong>vivo/a, viviente</strong><span>adj.</span><span class="vc-ex">«dok mu <u>živo</u> srce bije»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>mrtav / mrtve</em></div>
-          <div class="vc-back"><strong>muerto/a</strong><span>adj. usado como sust. · acusativo plural</span><span class="vc-ex">«dok mu <u>mrtve</u> grobak krije»</span></div>
-        </div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>lijep / lijepa</em></div><div class="vc-back"><strong>hermoso/a</strong><span>adj. · contiene <em>ije</em>, reflejo del fonema eslavo jat</span><span class="vc-ex">«<u>lijepa</u> naša domovino»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>mil / mila</em></div><div class="vc-back"><strong>querido/a, amado/a</strong><span>adj. · aparece 7 veces en el himno</span><span class="vc-ex">«<u>mila</u>, kano si nam slavna»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>junački / junačka</em></div><div class="vc-back"><strong>valeroso/a, heroico/a</strong><span>adj. · de junak (héroe)</span><span class="vc-ex">«oj, <u>junačka</u> zemljo mila»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>star / stara</em></div><div class="vc-back"><strong>antiguo/a, viejo/a</strong><span>adj. · genitivo: stare</span><span class="vc-ex">«<u>stare</u> slave djedovino»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>sretan / sretna</em></div><div class="vc-back"><strong>feliz, dichoso/a</strong><span>adj.</span><span class="vc-ex">«da bi vazda <u>sretna</u> bila»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>slavan / slavna</em></div><div class="vc-back"><strong>glorioso/a, célebre</strong><span>adj. · de slava (gloria)</span><span class="vc-ex">«kano si nam <u>slavna</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>ravan / ravna</em></div><div class="vc-back"><strong>llano/a, plano/a</strong><span>adj. · alude a las llanuras de Eslavonia</span><span class="vc-ex">«kuda si nam <u>ravna</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>sinje</em></div><div class="vc-back"><strong>azul marino, grisáceo</strong><span>adj. · epíteto poético del Adriático</span><span class="vc-ex">«<u>sinje</u> more, svijetu reci»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>živ / živo</em></div><div class="vc-back"><strong>vivo/a, viviente</strong><span>adj.</span><span class="vc-ex">«dok mu <u>živo</u> srce bije»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>mrtav / mrtve</em></div><div class="vc-back"><strong>muerto/a</strong><span>adj. usado como sust. · acusativo plural</span><span class="vc-ex">«dok mu <u>mrtve</u> grobak krije»</span></div></div>
       </div>
     </div>
 
     <div class="vocab-cat">
       <h3 class="vocab-cat-title">Verbos</h3>
       <div class="vocab-grid">
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>biti — biti</em></div>
-          <div class="vc-back"><strong>ser / estar</strong><span>verbo · bila = condicional I fem.</span><span class="vc-ex">«da bi vazda sretna <u>bila</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>teći</em></div>
-          <div class="vc-back"><strong>fluir, correr (agua)</strong><span>verbo · imperativo: teci</span><span class="vc-ex">«<u>teci</u>, Dravo, Savo, <u>teci</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>gubiti</em></div>
-          <div class="vc-back"><strong>perder</strong><span>verbo · gubi = 3ª pers. sing. pres.</span><span class="vc-ex">«nit' ti, Dunav, silu <u>gubi</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>reći</em></div>
-          <div class="vc-back"><strong>decir, contar</strong><span>verbo · imperativo: reci</span><span class="vc-ex">«sinje more, svijetu <u>reci</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>ljubiti</em></div>
-          <div class="vc-back"><strong>amar</strong><span>verbo · ljubi = 3ª pers. sing. pres.</span><span class="vc-ex">«da svoj narod Hrvat <u>ljubi</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>grijati</em></div>
-          <div class="vc-back"><strong>calentar</strong><span>verbo · grije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu njive sunce <u>grije</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>vijati</em></div>
-          <div class="vc-back"><strong>azotar, agitar</strong><span>verbo · vije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu hrašće bura <u>vije</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>kriti</em></div>
-          <div class="vc-back"><strong>esconder, cobĳar</strong><span>verbo · krije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu mrtve grobak <u>krije</u>»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>biti</em></div>
-          <div class="vc-back"><strong>latir, golpear</strong><span>verbo (≠ biti = ser) · bije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu živo srce <u>bije</u>»</span></div>
-        </div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>biti — bila</em></div><div class="vc-back"><strong>ser / estar</strong><span>verbo · bila = condicional I fem.</span><span class="vc-ex">«da bi vazda sretna <u>bila</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>teći</em></div><div class="vc-back"><strong>fluir, correr (agua)</strong><span>verbo · imperativo: teci</span><span class="vc-ex">«<u>teci</u>, Dravo, Savo, <u>teci</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>gubiti</em></div><div class="vc-back"><strong>perder</strong><span>verbo · gubi = 3ª pers. sing. pres.</span><span class="vc-ex">«nit' ti, Dunav, silu <u>gubi</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>reći</em></div><div class="vc-back"><strong>decir, contar</strong><span>verbo · imperativo: reci</span><span class="vc-ex">«sinje more, svijetu <u>reci</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>ljubiti</em></div><div class="vc-back"><strong>amar</strong><span>verbo · ljubi = 3ª pers. sing. pres.</span><span class="vc-ex">«da svoj narod Hrvat <u>ljubi</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>grijati</em></div><div class="vc-back"><strong>calentar</strong><span>verbo · grije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu njive sunce <u>grije</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>vijati</em></div><div class="vc-back"><strong>azotar, agitar</strong><span>verbo · vije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu hrašće bura <u>vije</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>kriti</em></div><div class="vc-back"><strong>esconder, cobijar</strong><span>verbo · krije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu mrtve grobak <u>krije</u>»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>biti — bije</em></div><div class="vc-back"><strong>latir, golpear</strong><span>verbo (≠ biti = ser) · bije = 3ª pers. sing. pres.</span><span class="vc-ex">«dok mu živo srce <u>bije</u>»</span></div></div>
       </div>
     </div>
 
     <div class="vocab-cat">
       <h3 class="vocab-cat-title">Palabras arcaicas y poéticas</h3>
       <div class="vocab-grid">
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>vazda</em></div>
-          <div class="vc-back"><strong>siempre</strong><span>arcaísmo · moderno: uvijek</span><span class="vc-ex">«da bi <u>vazda</u> sretna bila»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>kano</em></div>
-          <div class="vc-back"><strong>cuán, como</strong><span>arcaísmo · moderno: kako</span><span class="vc-ex">«mila, <u>kano</u> si nam slavna»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>kuda</em></div>
-          <div class="vc-back"><strong>cuán</strong><span>arcaísmo poético · moderno: kako/koliko</span><span class="vc-ex">«mila, <u>kuda</u> si nam ravna»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>nit' / niti</em></div>
-          <div class="vc-back"><strong>ni, tampoco</strong><span>conjunción negativa · nit' es apócope</span><span class="vc-ex">«<u>nit'</u> ti, Dunav, silu gubi»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>oj</em></div>
-          <div class="vc-back"><strong>¡oh! / ¡ey!</strong><span>interjección eslava de llamado emotivo</span><span class="vc-ex">«<u>oj</u>, junačka zemljo mila»</span></div>
-        </div>
-        <div class="vocab-card" onclick="vcFlip(this)">
-          <div class="vc-front"><em>da bi … bila</em></div>
-          <div class="vc-back"><strong>ojalá fueras / para que seas</strong><span>condicional I (kondicional I) con valor desiderativo</span><span class="vc-ex">«<u>da bi</u> vazda sretna <u>bila</u>»</span></div>
-        </div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>vazda</em></div><div class="vc-back"><strong>siempre</strong><span>arcaísmo · moderno: uvijek</span><span class="vc-ex">«da bi <u>vazda</u> sretna bila»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>kano</em></div><div class="vc-back"><strong>cuán, como</strong><span>arcaísmo · moderno: kako</span><span class="vc-ex">«mila, <u>kano</u> si nam slavna»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>kuda</em></div><div class="vc-back"><strong>cuán</strong><span>arcaísmo poético · moderno: kako/koliko</span><span class="vc-ex">«mila, <u>kuda</u> si nam ravna»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>nit' / niti</em></div><div class="vc-back"><strong>ni, tampoco</strong><span>conjunción negativa · nit' es apócope</span><span class="vc-ex">«<u>nit'</u> ti, Dunav, silu gubi»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>oj</em></div><div class="vc-back"><strong>¡oh! / ¡ey!</strong><span>interjección eslava de llamado emotivo</span><span class="vc-ex">«<u>oj</u>, junačka zemljo mila»</span></div></div>
+        <div class="vocab-card" onclick="vcFlip(this)"><div class="vc-front"><em>da bi … bila</em></div><div class="vc-back"><strong>ojalá fueras / para que seas</strong><span>condicional I (kondicional I) con valor desiderativo</span><span class="vc-ex">«<u>da bi</u> vazda sretna <u>bila</u>»</span></div></div>
       </div>
     </div>
   </div>
@@ -1117,8 +1119,9 @@ section[id]{scroll-margin-top:60px}
 
 <!-- FOOTER -->
 <footer>
-  <p>🇭🇷 <span>Lijepa naša domovino</span> · Himno Nacional de Croacia</p>
-  <p style="margin-top:.5rem;opacity:.6">Letra: Antun Mihanović (1835) · Música: Josip Runjanin (1846)</p>
+  <p style="font-size:.8rem">🇭🇷 <span>Lijepa naša domovino</span> · Himno Nacional de Croacia</p>
+  <p style="margin-top:.5rem;opacity:.6;font-size:.75rem">Letra: Antun Mihanović (1835) · Música: Josip Runjanin (1846)</p>
+  <p style="margin-top:.75rem;color:rgba(255,255,255,.78);font-size:.75rem">¿Comentarios o errores? <a href="mailto:backtocroatia@proton.me" style="color:rgba(255,255,255,.78);text-decoration:underline">backtocroatia@proton.me</a></p>
 </footer>
 
 <script>
@@ -1227,163 +1230,188 @@ if ('speechSynthesis' in window) {
 }
 
 // ── TELEPROMPTER ──
-const VERSES = [
-  {text:'Lijepa naša domovino,',   tr:'Nuestra hermosa patria,'},
-  {text:'Oj, junačka zemljo mila,', tr:'Oh, valerosa tierra querida,'},
-  {text:'Stare slave djedovino,',   tr:'Herencia de antigua gloria ancestral,'},
-  {text:'Da bi vazda sretna bila!', tr:'¡Para que siempre seas feliz!'},
-  {text:'Mila, kano si nam slavna,',tr:'Querida, cuán gloriosa eres para nosotros,'},
-  {text:'Mila, si nam ti jedina,',  tr:'Querida, eres tú nuestra única,'},
-  {text:'Mila, kuda si nam ravna,', tr:'Querida, cuán llana eres para nosotros,'},
-  {text:'Mila, kuda si planina!',   tr:'¡Querida, cuán montañosa eres!'},
-  {text:'Teci, Dravo, Savo, teci,', tr:'Fluye, Drava, Sava, fluye,'},
-  {text:"Nit' ti, Dunav, silu gubi,",tr:'Ni tú, Danubio, pierdas tu fuerza,'},
-  {text:'Sinje more, svijetu reci',  tr:'Mar azul (Adriático), di al mundo'},
-  {text:'Da svoj narod Hrvat ljubi', tr:'Que el croata ama a su pueblo'},
-  {text:'Dok mu njive sunce grije,', tr:'Mientras el sol calienta sus campos,'},
-  {text:'Dok mu hrašće bura vije,',  tr:'Mientras la bura azota sus robledales,'},
-  {text:'Dok mu mrtve grobak krije,',tr:'Mientras la tumba cobija a sus muertos,'},
-  {text:'Dok mu živo srce bije!',    tr:'¡Mientras su corazón vivo late!'}
-];
 
-let tpIdx = 0;
+// ── DRAG & DROP ──
+// dragOrders[1] = stanza 1 (indices 0-7), dragOrders[2] = stanza 2 (indices 8-15)
+const dragOrders = {1: [], 2: []};
 
-function tpRender() {
-  const p2 = document.getElementById('tp-past2');
-  const p1 = document.getElementById('tp-past1');
-  const cur = document.getElementById('tp-current');
-  const trEl = document.getElementById('tp-tr');
-  const n1 = document.getElementById('tp-next1');
-  const n2 = document.getElementById('tp-next2');
-  p2.textContent  = tpIdx >= 2 ? VERSES[tpIdx-2].text : '';
-  p1.textContent  = tpIdx >= 1 ? VERSES[tpIdx-1].text : '';
-  cur.textContent = VERSES[tpIdx].text;
-  trEl.textContent= VERSES[tpIdx].tr;
-  n1.textContent  = tpIdx+1 < VERSES.length ? VERSES[tpIdx+1].text : '';
-  n2.textContent  = tpIdx+2 < VERSES.length ? VERSES[tpIdx+2].text : '';
-}
-
-function tpNext() {
-  if (tpIdx < VERSES.length - 1) { tpIdx++; tpRender(); }
-}
-
-function tpPrev() {
-  if (tpIdx > 0) { tpIdx--; tpRender(); }
-}
-
-function tpReset() {
-  tpIdx = 0;
-  tpRender();
-}
-
-tpRender();
-
-// ── PRACTICAR: FLASHCARDS ──
-const FC_VERSES = [
-  {front:'Nuestra hermosa patria,',                    back:'Lijepa naša domovino,',         ipa:'[ljěː.pa nâ.ʃa do.mǒ.ʋi.no]'},
-  {front:'Oh, valerosa tierra querida,',               back:'Oj, junačka zemljo mila,',      ipa:'[oj jǔ.naːtʃ.kaː zêm.ʎoː mǐ.la]'},
-  {front:'Herencia de antigua gloria ancestral,',      back:'Stare slave djedovino,',         ipa:'[stâː.re slâ.ʋeː djê.do.ʋi.no]'},
-  {front:'¡Para que siempre seas feliz!',              back:'Da bi vazda sretna bila!',       ipa:'[dâ bi ʋâz.da srět.na bǐː.la]'},
-  {front:'Querida, cuán gloriosa eres para nosotros,', back:'Mila, kano si nam slavna,',     ipa:'[mǐ.la kâː.no si nâm slâːʋ.na]'},
-  {front:'Querida, eres tú nuestra única,',            back:'Mila, si nam ti jedina,',       ipa:'[mǐ.la si nâm tî jě.diː.naː]'},
-  {front:'Querida, cuán llana eres para nosotros,',    back:'Mila, kuda si nam ravna,',      ipa:'[mǐ.la kǔ.daː si nâm rǎːʋ.na]'},
-  {front:'¡Querida, cuán montañosa eres!',             back:'Mila, kuda si planina!',        ipa:'[mǐ.la kǔ.daː si pla.nǐ.na]'},
-  {front:'Fluye, Drava, Sava, fluye,',                 back:'Teci, Dravo, Savo, teci,',      ipa:'[tě.tsi drâː.ʋo sâː.ʋo tě.tsi]'},
-  {front:'Ni tú, Danubio, pierdas tu fuerza,',         back:"Nit' ti, Dunav, silu gubi,",   ipa:'[nit tî dǔ.naʋ sî.lu gǔ.biː]'},
-  {front:'Mar azul, di al mundo',                      back:'Sinje more, svijetu reci',       ipa:'[sîː.ɲeː môː.re sʋjěː.tu rê.tsi]'},
-  {front:'Que el croata ama a su pueblo',              back:'Da svoj narod Hrvat ljubi',      ipa:'[da sʋôːj nǎː.rod xř̩.ʋaːt ʎûː.biː]'},
-  {front:'Mientras el sol calienta sus campos,',       back:'Dok mu njive sunce grije,',      ipa:'[dôk mu ɲî.ʋe sûːn.tse grî.jeː]'},
-  {front:'Mientras la bura azota sus robledales,',     back:'Dok mu hrašće bura vije,',      ipa:'[dôk mu xr̩âʃ.tɕe bû.ra ʋî.jeː]'},
-  {front:'Mientras la tumba cobija a sus muertos,',    back:'Dok mu mrtve grobak krije,',     ipa:'[dôk mu mř̩t.ʋe grô.bak krî.jeː]'},
-  {front:'¡Mientras su corazón vivo late!',            back:'Dok mu živo srce bije!',         ipa:'[dôk mu ʒǐː.ʋo sr̩̂.tse bǐ.je]'},
-];
-
-let fcOrder = FC_VERSES.map((_,i)=>i);
-let fcIdx = 0;
-
-function fcRender() {
-  const d = FC_VERSES[fcOrder[fcIdx]];
-  document.getElementById('fc-front-text').textContent = d.front;
-  document.getElementById('fc-back-text').textContent  = d.back;
-  document.getElementById('fc-ipa-text').textContent   = d.ipa;
-  document.getElementById('fc-counter').textContent    = (fcIdx+1) + ' / ' + fcOrder.length;
-  document.getElementById('fc-bar').style.width        = ((fcIdx+1)/fcOrder.length*100) + '%';
-  document.getElementById('fc-inner').classList.remove('flipped');
-}
-
-function fcFlip() {
-  document.getElementById('fc-inner').classList.toggle('flipped');
-}
-
-function fcNext() {
-  if(fcIdx < fcOrder.length-1){ fcIdx++; fcRender(); }
-}
-
-function fcPrev() {
-  if(fcIdx > 0){ fcIdx--; fcRender(); }
-}
-
-function fcShuffle() {
-  for(let i=fcOrder.length-1;i>0;i--){
+function dragInit(stanza) {
+  const base = stanza === 1 ? 0 : 8;
+  dragOrders[stanza] = [0,1,2,3,4,5,6,7].map(i => i + base);
+  // Shuffle
+  const arr = dragOrders[stanza];
+  for(let i=arr.length-1;i>0;i--){
     const j=Math.floor(Math.random()*(i+1));
-    [fcOrder[i],fcOrder[j]]=[fcOrder[j],fcOrder[i]];
+    [arr[i],arr[j]]=[arr[j],arr[i]];
   }
-  fcIdx=0; fcRender();
+  dragRender(stanza);
+  document.getElementById('drag-score-'+stanza).textContent = '';
 }
 
-// ── PRACTICAR: VOCAB CARDS ──
-function vcFlip(el) {
-  el.classList.toggle('open');
+let dragSrc = {1: null, 2: null};
+
+function dragRender(stanza) {
+  const base = stanza === 1 ? 0 : 8;
+  const list = document.getElementById('drag-list-'+stanza);
+  if(!list) return;
+  list.innerHTML = '';
+  dragOrders[stanza].forEach((versoIdx, position) => {
+    const div = document.createElement('div');
+    div.className = 'drag-item';
+    div.draggable = true;
+    div.dataset.pos = position;
+    div.innerHTML = `<span class="drag-num">${position+1}</span><span class="drag-text">${VERSO_DATA[versoIdx].hr}</span><span class="drag-handle">⠿</span>`;
+    div.addEventListener('dragstart', e => {
+      dragSrc[stanza] = position;
+      div.classList.add('dragging');
+      e.dataTransfer.effectAllowed = 'move';
+    });
+    div.addEventListener('dragend', () => div.classList.remove('dragging','over'));
+    div.addEventListener('dragover', e => { e.preventDefault(); div.classList.add('over'); });
+    div.addEventListener('dragleave', () => div.classList.remove('over'));
+    div.addEventListener('drop', e => {
+      e.preventDefault();
+      div.classList.remove('over');
+      const src = dragSrc[stanza];
+      if(src === null || src === position) return;
+      [dragOrders[stanza][src], dragOrders[stanza][position]] = [dragOrders[stanza][position], dragOrders[stanza][src]];
+      dragSrc[stanza] = null;
+      dragRender(stanza);
+    });
+    list.appendChild(div);
+  });
 }
 
-// ── PRACTICAR: MODE SWITCH ──
+function dragCheck(stanza) {
+  const base = stanza === 1 ? 0 : 8;
+  const items = document.querySelectorAll('#drag-list-'+stanza+' .drag-item');
+  let correct = 0;
+  items.forEach((item, position) => {
+    const versoIdx = dragOrders[stanza][position];
+    if(versoIdx === position + base){
+      item.classList.add('correct'); item.classList.remove('wrong');
+      item.draggable = false; correct++;
+    } else {
+      item.classList.add('wrong'); item.classList.remove('correct');
+      setTimeout(()=>item.classList.remove('wrong'), 900);
+    }
+  });
+  const score = document.getElementById('drag-score-'+stanza);
+  if(correct === 8){
+    score.textContent = '¡Perfecto! ✓'; score.style.color = '#22a06b';
+  } else {
+    score.textContent = correct + ' de 8 correctos'; score.style.color = 'var(--ink-faint)';
+  }
+}
+
+function dragReset(stanza) { dragInit(stanza); }
+
+// ── ESCUCHA Y ELIGE ──
+let listenIdx = 0;
+let listenQueue = [];
+let listenAnswered = false;
+let listenCorrect = 0;
+let listenTotal = 0;
+
+function listenInit() {
+  listenQueue = VERSO_DATA.map((_,i)=>i).sort(()=>Math.random()-.5);
+  listenIdx = 0; listenAnswered = false; listenCorrect = 0; listenTotal = 0;
+  document.getElementById('listen-score').textContent = '';
+  document.getElementById('listen-result').textContent = '';
+  listenRenderOptions();
+}
+
+function listenRenderOptions() {
+  if(listenIdx >= listenQueue.length) {
+    document.getElementById('listen-options').innerHTML = '';
+    document.getElementById('listen-result').textContent = '¡Completado! ' + listenCorrect + ' de ' + listenTotal + ' correctos.';
+    document.getElementById('listen-result').style.color = '#22a06b';
+    return;
+  }
+  listenAnswered = false;
+  document.getElementById('listen-result').textContent = '';
+  document.getElementById('listen-play-btn').textContent = '▶ Reproducir verso';
+
+  const correct = listenQueue[listenIdx];
+  // Pick 3 wrong options
+  const pool = VERSO_DATA.map((_,i)=>i).filter(i=>i!==correct);
+  const wrongs = pool.sort(()=>Math.random()-.5).slice(0,3);
+  const options = [correct, ...wrongs].sort(()=>Math.random()-.5);
+
+  const container = document.getElementById('listen-options');
+  container.innerHTML = '';
+  options.forEach(idx => {
+    const btn = document.createElement('button');
+    btn.className = 'listen-opt';
+    btn.textContent = VERSO_DATA[idx].hr;
+    btn.onclick = () => listenAnswer(idx, correct, btn);
+    container.appendChild(btn);
+  });
+}
+
+function listenPlay() {
+  if(listenIdx >= listenQueue.length) return;
+  const correct = listenQueue[listenIdx];
+  speak(VERSO_DATA[correct].hr, 'hr-HR');
+  document.getElementById('listen-play-btn').textContent = '▶ Repetir';
+}
+
+function listenAnswer(chosen, correct, btn) {
+  if(listenAnswered) return;
+  listenAnswered = true;
+  listenTotal++;
+  const allBtns = document.querySelectorAll('.listen-opt');
+  allBtns.forEach(b => {
+    b.disabled = true;
+    if(b.textContent === VERSO_DATA[correct].hr) b.classList.add('listen-correct');
+  });
+  const result = document.getElementById('listen-result');
+  if(chosen === correct) {
+    btn.classList.add('listen-correct');
+    listenCorrect++;
+    result.textContent = '✓ Correcto';
+    result.style.color = '#22a06b';
+  } else {
+    btn.classList.add('listen-wrong');
+    result.textContent = '✗ Incorrecto — la traducción era: ' + VERSO_DATA[correct].es;
+    result.style.color = 'var(--red)';
+  }
+  document.getElementById('listen-score').textContent = listenCorrect + ' / ' + listenTotal;
+}
+
+function listenNext() {
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  listenIdx++;
+  listenRenderOptions();
+}
+
+function listenReset() {
+  window.speechSynthesis && window.speechSynthesis.cancel();
+  listenInit();
+}
+
+// ── MODE SWITCH ──
+function setVersoMode(mode, btn) {
+  document.querySelectorAll('.prac-subtab').forEach(t=>t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('modo-drag').style.display  = mode==='drag'  ? 'block' : 'none';
+  document.getElementById('modo-match').style.display = mode==='match' ? 'block' : 'none';
+  if(mode==='match') listenInit();
+}
+
+// Init both games
+dragInit(1);
+dragInit(2);
+listenInit();
+
+function vcFlip(el) { el.classList.toggle('open'); }
+
 function setPracMode(mode, btn) {
   document.querySelectorAll('.prac-tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('prac-versos').style.display = mode==='versos' ? 'block' : 'none';
   document.getElementById('prac-vocab').style.display  = mode==='vocab'  ? 'block' : 'none';
 }
-
-// Init flashcards
-fcRender();
-
-
-// ── REF TABS ──
-function showEst(n, btn) {
-  document.querySelectorAll('.ref-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.ref-panel').forEach(p => p.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('ref-est' + n).classList.add('active');
-}
-
-// ── KARAOKE SYNC ──
-(function(){
-  var audio = document.getElementById('hymnAudio');
-  if(!audio) return;
-  var lines = document.querySelectorAll('.kr-line');
-
-  audio.addEventListener('timeupdate', function(){
-    var t = audio.currentTime;
-    lines.forEach(function(line){
-      var start = parseFloat(line.dataset.start);
-      var end   = parseFloat(line.dataset.end);
-      line.classList.remove('active','done');
-      if(t >= start && t < end){
-        line.classList.add('active');
-        // scroll into view smoothly
-        line.scrollIntoView({behavior:'smooth', block:'nearest'});
-      } else if(t >= end){
-        line.classList.add('done');
-      }
-    });
-  });
-
-  audio.addEventListener('seeked', function(){
-    // re-trigger timeupdate manually
-    var e = new Event('timeupdate');
-    audio.dispatchEvent(e);
-  });
-})();
 
 </script>
 </body>
